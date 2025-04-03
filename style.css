@@ -1,20 +1,100 @@
-/* Estilos Generales y Fuentes */
+/* --- Estilos Generales y Fuentes --- */
 body {
-    font-family: 'Open Sans', sans-serif; /* Ejemplo de fuente */
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
+    background-color: #3d5d7e; /* Gris claro para el fondo general */
+    color: #333; /* Gris oscuro para el texto */
 }
 
-/* --- Estilos Personalizados --- */
+a {
+    color: #ff7f50; /* Naranja coral para enlaces */
+    text-decoration: none;
+}
 
-/* Hero Section */
+a:hover {
+    color: #0056b3; /* Azul oscuro para hover */
+    text-decoration: underline;
+}
+
+/* --- Header --- */
+header {
+    background-color: #0056b3; /* Azul oscuro */
+    color: rgb(90, 73, 73);
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header small {
+    font-size: 0.875rem;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: #705959; /* Blanco */
+    border-bottom: 2px solid #e9ecef; /* Gris claro */
+}
+
+.navbar-brand {
+    color: #ff7f50; /* Naranja coral */
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #333; /* Gris oscuro */
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0056b3; /* Azul oscuro */
+}
+
+/* --- Hero Section --- */
 #hero {
-    /* Puedes añadir un background-image aquí si quieres */
-    /* background: url('path/to/your/hero-image.jpg') no-repeat center center; */
-    /* background-size: cover; */
-    /* color: white;  Ajusta el color del texto si pones imagen oscura */
+    background-color: #ff7f50; /* Naranja coral */
+    color: rgb(94, 93, 93);
+    padding: 5rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
 }
 
-/* How it Works Section */
+#hero h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 1.25rem;
+}
+
+#hero a {
+    background-color: #0056b3; /* Azul oscuro */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+#hero a:hover {
+    background-color: #003d80; /* Azul más oscuro */
+}
+
+/* --- How it Works Section --- */
+#how-it-works {
+    background-color: #ffffff; /* Blanco */
+    padding: 3rem 2rem;
+    border-radius: 0.5rem;
+}
+
+#how-it-works h2 {
+    color: #0056b3; /* Azul oscuro */
+    font-weight: bold;
+}
+
 #how-it-works .fs-1 {
     font-size: 3rem !important; /* Ajusta tamaño de iconos si es necesario */
 }
@@ -29,39 +109,101 @@ body {
 
 /* Manual Gallery Section */
 #manual-gallery .card img {
-     height: 200px; /* Ajusta la altura si quieres */
-     object-fit: cover;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* Interactive Demo Section */
+#manual-gallery .card-body {
+    background-color: #ffffff; /* Blanco */
+    color: #333; /* Gris oscuro */
+    text-align: center;
+}
+
+/* --- Interactive Demo Section --- */
 #interactive-demo {
-    /* Estilos específicos para la demo si son necesarios */
+    background-color: #0056b3; /* Azul oscuro */
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 0.5rem;
 }
 
-#dog-visualization {
-    position: relative; /* Para posible posicionamiento absoluto interno */
+#interactive-demo h2 {
+    font-weight: bold;
 }
 
-#model-viewer-element {
-   /* Estilos específicos para el visor 3D */
-   /* display: none;  Se controla por JS */
+#interactive-demo form label {
+    color: white;
 }
 
-#dog-image-placeholder {
-    /* Estilos específicos para la imagen 2D */
-    /* display: block; Se controla por JS */
+#interactive-demo .btn {
+    background-color: #ff7f50; /* Naranja coral */
+    color: white;
 }
 
+#interactive-demo .btn:hover {
+    background-color: #e5673e; /* Naranja más oscuro */
+}
 
-/* Footer */
+/* --- Footer --- */
 footer {
-    /* Estilos del footer */
+    background-color: #c2c2c2; /* Gris oscuro */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
 }
 
-/* --- Utilidades o Ajustes --- */
-/* Ejemplo: asegurar que los contenedores tengan algo de espacio inferior */
+footer p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+/* --- Utilidades --- */
 section {
-    margin-bottom: 3rem; /* Ajusta según necesites */
+    margin-bottom: 3rem;
 }
 
-/* Añade aquí más estilos personalizados según vayas necesitando */
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Dog API Slider --- */
+#dog-api-slider {
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #333; /* Fondo oscuro mientras se cargan las imágenes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+#navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Asegura que la navbar esté por encima del slider */
+    background-color: #003d80;
+}
+#slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* Oculta las imágenes que se salen del contenedor */
+}
+
+#slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Escala la imagen para cubrir todo el espacio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transición suave entre imágenes */
+}
+
+#slider-container img.active {
+    opacity: 1; /* Imagen visible */
+}

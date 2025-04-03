@@ -259,4 +259,47 @@ document.addEventListener('DOMContentLoaded', () => {
          });
     }
 
+    // --- Slider de imágenes aleatorias ---
+    const sliderContainer = document.getElementById("slider-container");
+    const apiUrl = "https://dog.ceo/api/breeds/image/random/5"; // Obtiene 5 imágenes aleatorias
+    let currentIndex = 0;
+    let images = [];
+
+    // Función para cargar imágenes desde la API
+    async function loadDogImages() {
+        try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            images = data.message; // Array de URLs de imágenes
+            displayImages();
+        } catch (error) {
+            console.error("Error al cargar imágenes de la API:", error);
+        }
+    }
+
+    // Función para mostrar las imágenes en el slider
+    function displayImages() {
+        images.forEach((imageUrl, index) => {
+            const img = document.createElement("img");
+            img.src = imageUrl;
+            img.alt = `Dog ${index + 1}`;
+            if (index === 0) img.classList.add("active"); // La primera imagen es visible inicialmente
+            sliderContainer.appendChild(img);
+        });
+        startSlider();
+    }
+
+    // Función para alternar entre imágenes
+    function startSlider() {
+        const imgElements = sliderContainer.querySelectorAll("img");
+        setInterval(() => {
+            imgElements[currentIndex].classList.remove("active"); // Oculta la imagen actual
+            currentIndex = (currentIndex + 1) % imgElements.length; // Pasa a la siguiente imagen
+            imgElements[currentIndex].classList.add("active"); // Muestra la nueva imagen
+        }, 3000); // Cambia cada 3 segundos
+    }
+
+    // Cargar imágenes al iniciar
+    loadDogImages();
+
 }); // Fin de DOMContentLoaded
