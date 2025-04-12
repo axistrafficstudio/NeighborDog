@@ -2,8 +2,14 @@
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    background-color: #3d5d7e; /* Gris claro para el fondo general */
+    background-color: #ffa500; /* Naranja */
     color: #333; /* Gris oscuro para el texto */
+}
+
+.btn-primary {
+    background-color: #ff7f50; /* Naranja coral */
+    color: white;
+    border: none;
 }
 
 a {
@@ -34,7 +40,7 @@ header small {
 
 /* --- Navbar --- */
 .navbar {
-    background-color: #705959; /* Blanco */
+    background-color: #875f2b; /* Blanco */
     border-bottom: 2px solid #e9ecef; /* Gris claro */
 }
 
@@ -44,12 +50,12 @@ header small {
 }
 
 .navbar-nav .nav-link {
-    color: #333; /* Gris oscuro */
+    color: #879f5e; /* Gris oscuro */
     font-weight: 500;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #0056b3; /* Azul oscuro */
+    color: #d2ac5b; /* Azul oscuro */
 }
 
 /* --- Hero Section --- */
@@ -71,7 +77,7 @@ header small {
 }
 
 #hero a {
-    background-color: #0056b3; /* Azul oscuro */
+    background-color: #ca803b; /* Azul oscuro */
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
@@ -80,18 +86,18 @@ header small {
 }
 
 #hero a:hover {
-    background-color: #003d80; /* Azul más oscuro */
+    background-color: #c77e1f; /* Azul más oscuro */
 }
 
 /* --- How it Works Section --- */
 #how-it-works {
-    background-color: #ffffff; /* Blanco */
+    background-color: #c7bdb0; /* Blanco */
     padding: 3rem 2rem;
     border-radius: 0.5rem;
 }
 
 #how-it-works h2 {
-    color: #0056b3; /* Azul oscuro */
+    color: #dfebdf; /* Azul oscuro */
     font-weight: bold;
 }
 
@@ -121,7 +127,7 @@ header small {
 
 /* --- Interactive Demo Section --- */
 #interactive-demo {
-    background-color: #0056b3; /* Azul oscuro */
+    background-color: #be7e1d; /* Azul oscuro */
     color: white;
     padding: 3rem 2rem;
     border-radius: 0.5rem;
@@ -136,7 +142,7 @@ header small {
 }
 
 #interactive-demo .btn {
-    background-color: #ff7f50; /* Naranja coral */
+    background-color: #a54f30; /* Naranja coral */
     color: white;
 }
 
@@ -184,7 +190,7 @@ button {
     left: 0;
     width: 100%;
     z-index: 10; /* Asegura que la navbar esté por encima del slider */
-    background-color: #003d80;
+    background-color: #e29717;
 }
 #slider-container {
     width: 100%;
@@ -206,4 +212,41 @@ button {
 
 #slider-container img.active {
     opacity: 1; /* Imagen visible */
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    }
+
+    #hero {
+        padding: 2rem 0.5 rem; /* Reduce el padding del hero */
+    }
+
+    #hero h2 {
+        font-size: 1rem; /* Ajusta el tamaño del título */
+    }
+
+    #how-it-works {
+        padding: 1rem 0.5rem; /* Reduce el padding */
+    }
+
+    #interactive-demo {
+        padding: 2rem 1rem; /* Ajusta el padding */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1 rem; /* Reduce el tamaño del header */
+    }
+
+    #hero h2 {
+        font-size: 1.25rem; /* Ajusta el tamaño del título */
+    }
+
+    #hero p {
+        font-size: 0.6 rem; /* Ajusta el tamaño del texto */
+    }
 }

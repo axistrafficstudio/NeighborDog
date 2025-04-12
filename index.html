@@ -19,18 +19,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<header class="bg-light p-3 border-bottom">
+    <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="h4">NEIGHBORDOG <small class="text-muted fs-6">Safe</small></h1>
+        <!-- Botón para abrir el menú -->
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menuModal">
+            Menú
+        </button>
+    </div>
+</header>
+
 <body>
+    
 
 
-    <header class="bg-light p-3 mb-4 border-bottom">
-        <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="h4">NEIGHBORDOG <small class="text-muted fs-6">Cuidamos a tu mejor amigo</small></h1>
-            <!-- Botón para abrir el menú -->
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menuModal">
-                Menú
-            </button>
-        </div>
-    </header>
 
     <!-- Modal del Menú -->
 <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
@@ -76,11 +78,13 @@
             <a href="#interactive-demo" class="btn btn-primary btn-lg">Descubre cómo funciona</a>
         </section>
 
-        <section id="dog-api-slider" class="position-relative overflow-hidden">
-            <div id="slider-container" class="w-100 h-100 position-absolute top-0 start-0">
-                <!-- Las imágenes se cargarán dinámicamente aquí -->
+        <section>
+            <div>
+               <img src="Imagenes\FireflyDog.jpg" alt="Entradaimagen" class="FireflyDog w-100 h-100 top-0 start-0"
+               style="width: auto; height: auto; object-fit: cover;">
             </div>
-        </section>
+           </section>
+      
 
         <section id="how-it-works" class="my-5">
             <h2 class="text-center mb-4">¿Cómo Funciona?</h2>
@@ -106,6 +110,12 @@
                         <p>Contacta, conoce al cuidador y ¡disfruta de tus vacaciones!</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="dog-api-slider" class="position-relative overflow-hidden">
+            <div id="slider-container" class="w-100 h-100 position-absolute top-0 start-0">
+                <!-- Las imágenes se cargarán dinámicamente aquí -->
             </div>
         </section>
 
@@ -149,6 +159,20 @@
             </div>
         </section>
 
+        <section id="map" class="my-5">
+            <h2 class="text-center mb-4">Nuestra Ubicación</h2>
+        
+            <div class="ratio ratio-16x9 mx-auto" style="max-width: 1400px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1067163.3106718822!2d-7.166019383551202!3d43.26895504865666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368cfa609eb09d%3A0xf8b5f32b7dc69e3a!2sPrincipado%20de%20Asturias%2C%20Asturias!5e1!3m2!1ses!2ses!4v1744482699387!5m2!1ses!2ses" style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+       
+
         <section id="satisfied-clients" class="my-5 bg-light p-5 rounded">
             <h2 class="text-center mb-4">Nuestros Clientes Peludos Satisfechos</h2>
             <p class="text-center text-muted mb-4">¡Algunos de los amigos que han encontrado un segundo hogar!</p>
@@ -168,7 +192,7 @@
              <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
                  <div class="col">
                     <div class="card">
-                        <img src="https://via.placeholder.com/400x300/CCCCCC/808080?text=Tu+Imagen+Aquí+1" class="card-img-top" alt="Descripción de la imagen 1">
+                        <img src="Imagenes\MomentosFelices\5cb1f9400891d9da5a4926d7814bd1b89127ecba-1300x867.webp" class="card-img-top" alt="Descripción de la imagen 1">
                         <div class="card-body">
                             <p class="card-text text-center">Descripción breve 1</p>
                         </div>
@@ -176,7 +200,7 @@
                  </div>
                  <div class="col">
                     <div class="card">
-                        <img src="https://via.placeholder.com/400x300/CCCCCC/808080?text=Tu+Imagen+Aquí+2" class="card-img-top" alt="Descripción de la imagen 2">
+                        <img src="Imagenes\MomentosFelices\b0ee803a6e46-razas-de-perros-raras-a.avif" class="card-img-top" alt="Descripción de la imagen 2">
                          <div class="card-body">
                             <p class="card-text text-center">Descripción breve 2</p>
                         </div>
@@ -184,7 +208,7 @@
                  </div>
                  <div class="col">
                      <div class="card">
-                        <img src="https://via.placeholder.com/400x300/CCCCCC/808080?text=Tu+Imagen+Aquí+3" class="card-img-top" alt="Descripción de la imagen 3">
+                        <img src="Imagenes\MomentosFelices\cnne-1361799-las-5-razas-de-perro-mas-populares-en-estados-unidos.jpeg" class="card-img-top" alt="Descripción de la imagen 3">
                          <div class="card-body">
                             <p class="card-text text-center">Descripción breve 3</p>
                         </div>
@@ -260,6 +284,8 @@
             </div>
         </section>
 
+       
+
     </main>
 
    
@@ -303,7 +329,7 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
 
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+   
 
 
     <script src="script.js"></script>

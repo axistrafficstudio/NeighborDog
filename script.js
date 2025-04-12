@@ -302,4 +302,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cargar imágenes al iniciar
     loadDogImages();
 
+    // --- Intersection Observer para animaciones de secciones ---
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach((section) => observer.observe(section));
+
+    // --- Inicializar el mapa de Google ---
+    function initMap() {
+        const madrid = { lat: 40.416775, lng: -3.703790 }; // Coordenadas de Madrid
+        const map = new google.maps.Map(document.getElementById("google-map"), {
+            zoom: 12,
+            center: madrid,
+        });
+
+        // Marcador en Madrid
+        new google.maps.Marker({
+            position: madrid,
+            map: map,
+            title: "Estamos aquí: Madrid",
+        });
+    }
+
 }); // Fin de DOMContentLoaded
