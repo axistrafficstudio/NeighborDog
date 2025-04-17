@@ -331,4 +331,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Animación de onda en canvas ---
+    const canvas = document.getElementById("wave-canvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let wave = {
+        y: canvas.height / 2,
+        length: 0.02,
+        amplitude: 200,
+        frequency: 0.02,
+    };
+
+    let increment = wave.frequency;
+
+    function drawWave() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.beginPath();
+        ctx.moveTo(0, canvas.height / 2);
+
+        for (let i = 0; i < canvas.width; i++) {
+            ctx.lineTo(
+                i,
+                wave.y +
+                    Math.sin(i * wave.length + increment) * wave.amplitude *
+                    Math.sin(increment)
+            );
+        }
+
+        ctx.lineTo(canvas.width, canvas.height);
+        ctx.lineTo(0, canvas.height);
+        ctx.closePath();
+
+        // Degradado naranja y blanco
+        const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        gradient.addColorStop(0, "#ff7f50");
+        gradient.addColorStop(1, "#ffffff");
+
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+        increment += wave.frequency * 0.5;
+
+        requestAnimationFrame(drawWave);
+    }
+
+    drawWave();
+
 }); // Fin de DOMContentLoaded

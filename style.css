@@ -1,30 +1,29 @@
-/* --- Estilos Generales y Fuentes --- */
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    background-color: #ffa500; /* Naranja */
-    color: #333; /* Gris oscuro para el texto */
+    background-color: #ffa500; 
+    color: #333; 
 }
 
 .btn-primary {
-    background-color: #ff7f50; /* Naranja coral */
+    background-color: #ff7f50; 
     color: white;
     border: none;
 }
 
 a {
-    color: #ff7f50; /* Naranja coral para enlaces */
+    color: #ff7f50; 
     text-decoration: none;
 }
 
 a:hover {
-    color: #0056b3; /* Azul oscuro para hover */
+    color: #0056b3; 
     text-decoration: underline;
 }
 
-/* --- Header --- */
+
 header {
-    background-color: #0056b3; /* Azul oscuro */
+    background-color: #0056b3; 
     color: rgb(90, 73, 73);
     padding: 1rem 0;
 }
@@ -34,33 +33,58 @@ header h1 {
     font-weight: bold;
 }
 
+
 header small {
     font-size: 0.875rem;
 }
 
-/* --- Navbar --- */
+
 .navbar {
-    background-color: #875f2b; /* Blanco */
-    border-bottom: 2px solid #e9ecef; /* Gris claro */
+    background-color: #875f2b; 
+    border-bottom: 2px solid #e9ecef; 
 }
 
 .navbar-brand {
-    color: #ff7f50; /* Naranja coral */
+    color: #ff7f50; 
     font-weight: bold;
 }
 
 .navbar-nav .nav-link {
-    color: #879f5e; /* Gris oscuro */
+    color: #879f5e;
     font-weight: 500;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #d2ac5b; /* Azul oscuro */
+    color: #d2ac5b; 
 }
 
-/* --- Hero Section --- */
+#full-image-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    overflow: hidden;
+}
+
+#full-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra toda la pantalla */
+}
+
+.image-title {
+    position: absolute;
+    bottom: 20px; /* Posicionado cerca de la parte inferior */
+    left: 20px; /* Posicionado cerca del lado izquierdo */
+    font-size: 50px;
+    color: #fff; /* Color blanco */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Sombra para mejor visibilidad */
+    margin: 0;
+}
+
+
 #hero {
-    background-color: #ff7f50; /* Naranja coral */
+    background-color: #ff7f50; 
     color: rgb(94, 93, 93);
     padding: 5rem 2rem;
     border-radius: 0.5rem;
@@ -77,7 +101,7 @@ header small {
 }
 
 #hero a {
-    background-color: #ca803b; /* Azul oscuro */
+    background-color: #ca803b; 
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
@@ -86,48 +110,47 @@ header small {
 }
 
 #hero a:hover {
-    background-color: #c77e1f; /* Azul más oscuro */
+    background-color: #c77e1f; 
 }
 
-/* --- How it Works Section --- */
 #how-it-works {
-    background-color: #c7bdb0; /* Blanco */
+    background-color: #c7bdb0;
     padding: 3rem 2rem;
     border-radius: 0.5rem;
 }
 
 #how-it-works h2 {
-    color: #dfebdf; /* Azul oscuro */
+    color: #dfebdf; 
     font-weight: bold;
 }
 
 #how-it-works .fs-1 {
-    font-size: 3rem !important; /* Ajusta tamaño de iconos si es necesario */
+    font-size: 3rem !important;
 }
 
-/* Satisfied Clients Section */
+
 #satisfied-clients img {
     width: 100%;
-    height: 250px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Escala la imagen manteniendo aspect ratio y cubriendo el espacio */
-    border-radius: 0.375rem; /* Igual que .rounded de Bootstrap */
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 0.375rem;
 }
 
-/* Manual Gallery Section */
+
 #manual-gallery .card img {
     height: 200px;
     object-fit: cover;
 }
 
 #manual-gallery .card-body {
-    background-color: #ffffff; /* Blanco */
-    color: #333; /* Gris oscuro */
+    background-color: #ffffff; 
+    color: #333; 
     text-align: center;
 }
 
-/* --- Interactive Demo Section --- */
+
 #interactive-demo {
-    background-color: #be7e1d; /* Azul oscuro */
+    background-color: #be7e1d;
     color: white;
     padding: 3rem 2rem;
     border-radius: 0.5rem;
@@ -142,17 +165,17 @@ header small {
 }
 
 #interactive-demo .btn {
-    background-color: #a54f30; /* Naranja coral */
+    background-color: #a54f30;
     color: white;
 }
 
 #interactive-demo .btn:hover {
-    background-color: #e5673e; /* Naranja más oscuro */
+    background-color: #e5673e;
 }
 
-/* --- Footer --- */
+
 footer {
-    background-color: #c2c2c2; /* Gris oscuro */
+    background-color: #c2c2c2; 
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -163,7 +186,7 @@ footer p {
     font-size: 0.875rem;
 }
 
-/* --- Utilidades --- */
+
 section {
     margin-bottom: 3rem;
 }
@@ -173,11 +196,11 @@ button {
     cursor: pointer;
 }
 
-/* --- Dog API Slider --- */
+/*Dog API Slider*/
 #dog-api-slider {
     width: 100%;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    background-color: #333; /* Fondo oscuro mientras se cargan las imágenes */
+    height: 100vh; 
+    background-color: #333; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,64 +212,129 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; /* Asegura que la navbar esté por encima del slider */
+    z-index: 10; 
     background-color: #e29717;
 }
 #slider-container {
     width: 100%;
     height: 100%;
     position: relative;
-    overflow: hidden; /* Oculta las imágenes que se salen del contenedor */
+    overflow: hidden; 
 }
 
 #slider-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Escala la imagen para cubrir todo el espacio */
+    object-fit: cover; 
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity 1s ease-in-out; /* Transición suave entre imágenes */
+    transition: opacity 1s ease-in-out; 
 }
 
 #slider-container img.active {
-    opacity: 1; /* Imagen visible */
+    opacity: 1; 
 }
 
-/* --- Responsividad --- */
+#mission-vision-values {
+    background-color: #ffffff; 
+    color: #333333; 
+    height: 60vh; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#mission-vision-values h2 {
+    color: #ff7f50; /* Títulos en naranja */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+#mission-vision-values h3 {
+    color: #ff7f50; /* Subtítulos en naranja */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#mission-vision-values p {
+    color: #333333; /* Texto en gris oscuro */
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+#mission-vision-values .border {
+    border: 2px solid #ff7f50; /* Bordes en naranja */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9; /* Fondo claro para los cuadros */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+#wave-section {
+    position: relative;
+    height: 100vh; /* Ocupa toda la pantalla */
+    background-color: #000; /* Fondo negro */
+    overflow: hidden;
+}
+
+.wave-title {
+    position: absolute;
+    z-index: 2;
+    font-size: 500px;
+    color: #fff; /* Color blanco */
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+}
+
+#wave-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* --- Responsive de la web --- */
 @media (max-width: 768px) {
     body {
-        font-size: 12px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+        font-size: 12px; 
     }
 
     #hero {
-        padding: 2rem 0.5 rem; /* Reduce el padding del hero */
+        padding: 2rem 0.5 rem; 
     }
 
     #hero h2 {
-        font-size: 1rem; /* Ajusta el tamaño del título */
+        font-size: 1rem;
     }
 
     #how-it-works {
-        padding: 1rem 0.5rem; /* Reduce el padding */
+        padding: 1rem 0.5rem; 
     }
 
     #interactive-demo {
-        padding: 2rem 1rem; /* Ajusta el padding */
+        padding: 2rem 1rem;
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1 rem; /* Reduce el tamaño del header */
+        font-size: 1 rem; 
     }
 
     #hero h2 {
-        font-size: 1.25rem; /* Ajusta el tamaño del título */
+        font-size: 1.25rem; 
     }
 
     #hero p {
-        font-size: 0.6 rem; /* Ajusta el tamaño del texto */
+        font-size: 0.6 rem; 
     }
 }
