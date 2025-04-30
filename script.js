@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    
+
     /**
      * Obtiene la lista de razas de la Dog API y las añade al <select>.
      */
@@ -315,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach((section) => observer.observe(section));
 
-    // --- Inicializar el mapa de Google ---
+    // ctrl c google maps
     function initMap() {
         const madrid = { lat: 40.416775, lng: -3.703790 }; // Coordenadas de Madrid
         const map = new google.maps.Map(document.getElementById("google-map"), {
@@ -331,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Animación de onda en canvas ---
+    // tutorial animación canvas
     const canvas = document.getElementById("wave-canvas");
     const ctx = canvas.getContext("2d");
 
@@ -381,4 +383,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     drawWave();
 
-}); // Fin de DOMContentLoaded
+}); 
