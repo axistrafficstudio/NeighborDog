@@ -34,6 +34,7 @@
     </div>
   </header>
 
+  <!-- HERO BANNER DOG -->
   <section id="full-image-section" class="position-relative">
     <img
       src="Imagenes/MomentosFelices/cnne-1361799-las-5-razas-de-perro-mas-populares-en-estados-unidos.jpeg"
@@ -43,6 +44,7 @@
     <h1 class="image-title">NeighborDog</h1>
   </section>
 
+<!-- CALL TO ACTION 1 -->
   <section id="hero" class="text-center bg-light rounded">
     <h2 class="display-4 fw-bold">Viaja tranquilo, tu perro en buenas manos</h2>
     <p class="lead my-3">
@@ -52,6 +54,7 @@
     <a href="#interactive-demo" class="btn btn-primary btn-lg">Descubre cómo funciona</a>
   </section>
 
+<!-- API IMAGES -->
   <section id="satisfied-clients" class="my-5 bg-light p-5 rounded">
     <h2 class="text-center mb-4">Nuestros Clientes Peludos Satisfechos</h2>
     <p class="text-center text-muted mb-4">
@@ -68,6 +71,11 @@
       </div>
     </div>
   </section>
+
+  <!-- BIG TEXT -->
+  <section class="renting">
+    <h1>Disfruta de las ventajas que podemos ofrecerte a ti y a tu mejor amigo.</h1>
+</section>
 
   <body>
     <!-- Modal del Menú -->
@@ -125,6 +133,7 @@
       </div>
     </div>
 
+    <!-- MISIÓN VISIÓN Y VALORES -->
     <section
       id="mission-vision-values"
       class="d-flex flex-column justify-content-center align-items-center text-center bg-white vh-200"
@@ -164,6 +173,7 @@
       </div>
     </section>
 
+    <!-- WAVE ANIMATION -->
     <section
       id="wave-section"
       class="d-flex justify-content-center align-items-center text-center"
@@ -172,6 +182,7 @@
       <canvas id="wave-canvas"></canvas>
     </section>
 
+    <!-- AI IMAGE -->
     <section>
       <div>
         <img
@@ -183,6 +194,7 @@
       </div>
     </section>
 
+    <!-- CALL TO ACTION 2 -->
     <section>
       <div class="container text-center my-5">
         <h2 class="display-4 fw-bold">Miles de hogares para tu mejor amigo</h2>
@@ -195,6 +207,7 @@
       </div>
     </section>
 
+    <!-- CÓMO FUNCIONA -->
     <main class="container">
       <section id="how-it-works" class="my-5">
         <h2 class="text-center mb-4">¿Cómo Funciona?</h2>
@@ -223,88 +236,55 @@
         </div>
       </section>
 
+      <!-- GALERÍA API -->
       <section id="dog-api-slider" class="position-relative overflow-hidden">
         <div id="slider-container" class="w-100 h-100 position-absolute top-0 start-0">
           <!-- Las imágenes se cargarán dinámicamente aquí -->
         </div>
       </section>
 
+      <!-- MODELOS 3D -->
       <section id="3d-models" class="my-5">
         <h2 class="text-center mb-4">Explora Nuestros Modelos 3D</h2>
-        <p class="text-center text-muted mb-5">
-          Interactúa con los modelos 3D de nuestros amigos peludos y descubre más sobre
-          ellos.
-        </p>
+        <p class="text-center text-muted mb-5">Interactúa con los modelos 3D de nuestros amigos peludos y descubre más sobre ellos.</p>
         <div class="row text-center">
-          <div class="col-md-4 mb-4">
-            <div class="p-3 border rounded bg-light shadow">
-              <h5 class="mb-3">Modelo 1: Labrador</h5>
-              <model-viewer
-                src="models/Labrador.glb"
-                ar
-                ar-modes="webxr scene-viewer quick-look"
-                camera-controls
-                tone-mapping="neutral"
-                poster="models/Labrador-poster.webp"
-                shadow-intensity="1"
-                exposure="1"
-              >
-                <div class="progress-bar hide" slot="progress-bar">
-                  <div class="update-bar"></div>
+            <div class="col-md-4 mb-4">
+                <div class="p-3 border rounded bg-light shadow">
+                    <h5 class="mb-3">Modelo 1: Labrador</h5>
+                    <model-viewer src="models/Dog0.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/Labrador-poster.webp" shadow-intensity="1" exposure="1">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
+                    </model-viewer>
                 </div>
-                <button slot="ar-button" class="btn btn-primary btn-sm mt-3">
-                  Ver en tu espacio
-                </button>
-              </model-viewer>
             </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="p-3 border rounded bg-light shadow">
-              <h5 class="mb-3">Modelo 2: Golden Retriever</h5>
-              <model-viewer
-                src="models/GoldenRetriever.glb"
-                ar
-                ar-modes="webxr scene-viewer quick-look"
-                camera-controls
-                tone-mapping="neutral"
-                poster="models/GoldenRetriever-poster.webp"
-                shadow-intensity="1"
-                exposure="0.91"
-              >
-                <div class="progress-bar hide" slot="progress-bar">
-                  <div class="update-bar"></div>
+            <div class="col-md-4 mb-4">
+                <div class="p-3 border rounded bg-light shadow">
+                    <h5 class="mb-3">Modelo 2: Golden Retriever</h5>
+                    <model-viewer src="models/Dog1.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/GoldenRetriever-poster.webp" shadow-intensity="1" exposure="0.91">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
+                    </model-viewer>
                 </div>
-                <button slot="ar-button" class="btn btn-primary btn-sm mt-3">
-                  Ver en tu espacio
-                </button>
-              </model-viewer>
             </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="p-3 border rounded bg-light shadow">
-              <h5 class="mb-3">Modelo 3: Bulldog</h5>
-              <model-viewer
-                src="models/Bulldog.glb"
-                ar
-                ar-modes="webxr scene-viewer quick-look"
-                camera-controls
-                tone-mapping="neutral"
-                poster="models/Bulldog-poster.webp"
-                shadow-intensity="1"
-                exposure="0.91"
-              >
-                <div class="progress-bar hide" slot="progress-bar">
-                  <div class="update-bar"></div>
+            <div class="col-md-4 mb-4">
+                <div class="p-3 border rounded bg-light shadow">
+                    <h5 class="mb-3">Modelo 3: Bulldog</h5>
+                    <model-viewer src="models/Dog2.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/Bulldog-poster.webp" shadow-intensity="1" exposure="0.91">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
+                    </model-viewer>
                 </div>
-                <button slot="ar-button" class="btn btn-primary btn-sm mt-3">
-                  Ver en tu espacio
-                </button>
-              </model-viewer>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
+    <!-- GOOGLE MAPS -->
       <section id="map" class="my-5 section-map">
         <h2 class="text-center mb-4">Nuestra Ubicación</h2>
         <!-- Navbar de mapa -->
@@ -381,6 +361,59 @@
         </div>
       </section>
 
+      <!-- FLIP CARDS -->
+      <div class="main-container">
+        <!-- <h1 class="main-title">Nuestros Valores</h1>
+        <h2 class="main-title2">Haga click en las distintas cartas:</h2> -->
+        <div class="valores-container">
+            <!-- CONTACTO Card -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        CONTACTO
+                    </div>
+                    <div class="card-back">
+                        <h2 class="cardtitle">CONTACTO</h2>
+                        <div class="content">
+                            Nos enfocamos en ofrecer vehículos que proporcionen una conducción suave y sin esfuerzo, para que cada trayecto sea una experiencia cómoda y placentera. La tecnología avanzada en suspensión y aerodinámica asegura un manejo fluido y sin interrupciones.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OFICINAS Card -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                      OFICINAS
+                    </div>
+                    <div class="card-back">
+                        <h2 class="cardtitle">OFICINAS</h2>
+                        <div class="content">
+                            Nuestros coches están diseñados para ofrecer un desempeño excepcional con una acceleración rápida y control preciso. Cada modelo combina potencia, seguridad y agilidad, permitiendo a los conductores disfrutar de la velocidad con total confianza.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAREERS Card -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                      CAREERS
+                    </div>
+                    <div class="card-back">
+                        <h2 class="cardtitle">CAREERS</h2>
+                        <div class="content">
+                            El diseño de nuestros vehículos refleja sofisticación, innovación y distinción, creando coches que son tanto funcionales como una declaración de estilo. Trabajamos con los mejores diseñadores para lograr la perfecta armonía entre belleza, ergonomía y funcionalidad.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GALERÍA MOMENTOS FELICES -->
       <section id="manual-gallery" class="my-5">
         <h2 class="text-center mb-4">Galería de Momentos Felices</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
@@ -423,6 +456,7 @@
         </div>
       </section>
 
+      <!-- DEMO INTERACTIVA -->
       <section id="interactive-demo" class="my-5 p-5 bg-primary-subtle rounded">
         <h2 class="text-center mb-5">Demo Interactiva: Encuentra el Match Perfecto</h2>
         <div class="row g-5">
@@ -555,6 +589,7 @@
           </div>
         </div>
       </section>
+
       <!-- Sección transporte de mascotas -->
       <section class="my-5 section-transporte">
         <div class="container col-10">
@@ -566,6 +601,7 @@
       </section>
     </main>
 
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-4">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">NeighborDog</a>
@@ -602,6 +638,7 @@
       </div>
     </nav>
 
+    <!-- FOOTER -->
     <footer class="container text-center text-muted py-4 mt-5 border-top">
       <p>
         &copy; <span id="current-year"></span> PaseaDog - Todos los derechos reservados
@@ -609,13 +646,15 @@
       </p>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="script.js"></script>
+    
   </body>
 </html>
 ```

@@ -383,4 +383,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     drawWave();
 
+    // función flip cards
+    $(document).ready(function() {
+        $('.card').click(function() {
+            $(this).toggleClass('flipped');
+        });
+    });
+
 }); 
