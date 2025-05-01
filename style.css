@@ -1,18 +1,18 @@
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    background-color: #ffa500; 
+    background-color: #FFC118; 
     color: #333; 
 }
 
 .btn-primary {
-    background-color: #ff7f50; 
+    background-color: #FFC118; 
     color: white;
     border: none;
 }
 
 a {
-    color: #ff7f50; 
+    color: #FFC118; 
     text-decoration: none;
 }
 
@@ -40,12 +40,12 @@ header small {
 
 
 .navbar {
-    background-color: #875f2b; 
+    background-color: #FFC118; 
     border-bottom: 2px solid #e9ecef; 
 }
 
 .navbar-brand {
-    color: #ff7f50; 
+    color: #FFC118; 
     font-weight: bold;
 }
 
@@ -84,7 +84,7 @@ header small {
 
 
 #hero {
-    background-color: #ff7f50; 
+    background-color: #FFC118; 
     color: rgb(94, 93, 93);
     padding: 5rem 2rem;
     border-radius: 0.5rem;
@@ -101,7 +101,7 @@ header small {
 }
 
 #hero a {
-    background-color: #ca803b; 
+    background-color: #FFC118; 
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
@@ -150,7 +150,7 @@ header small {
 
 
 #interactive-demo {
-    background-color: #be7e1d;
+    background-color: #FFC118;
     color: white;
     padding: 3rem 2rem;
     border-radius: 0.5rem;
@@ -249,14 +249,14 @@ button {
 }
 
 #mission-vision-values h2 {
-    color: #ff7f50; /* Títulos en naranja */
+    color: #FFC118; /* Títulos en naranja */
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
 }
 
 #mission-vision-values h3 {
-    color: #ff7f50; /* Subtítulos en naranja */
+    color: #FFC118; /* Subtítulos en naranja */
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -269,7 +269,7 @@ button {
 }
 
 #mission-vision-values .border {
-    border: 2px solid #ff7f50; /* Bordes en naranja */
+    border: 2px solid #FFC118; /* Bordes en naranja */
     border-radius: 0.5rem;
     padding: 1.5rem;
     background-color: #f9f9f9; /* Fondo claro para los cuadros */
@@ -301,6 +301,137 @@ button {
     height: 100%;
     z-index: 1;
 }
+
+.main-container {
+    background-color: rgb(255, 255, 255);
+    max-width: 85%;
+    margin: 0 auto;
+    border-radius: 50px;
+    margin-top: 100px;
+}
+
+.main-title {
+    text-align: left;
+    padding-left: 4%;
+    color: #FFC118;
+    font-size: 42px;
+    font-family: 'Montserrat', sans-serif, bold;
+    font-weight: 800;
+    margin: 0.5rem 0;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+.main-title2 {
+    text-align: left;
+    padding-left: 4%;
+    color: #FFC118;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif, bold;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+  
+}
+
+.valores-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.card-container {
+    perspective: 1000px;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-front {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #FFC118;
+    color: #FFC118;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Yesteryear', sans-serif;
+}
+
+.card-back {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #FFC118;
+    transform: rotateY(180deg);
+    overflow: auto;
+}
+
+.cardtitle { /*Título de la carta*/
+    color: #FFC118;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: "Yesteryear", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+
+.card-back .content { /*Contenido dentro de la carta*/
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFC118;
+    justify-content: center;
+    display: absolute;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/* Renting */
+
+.renting {
+    background-color: white;
+    padding: 40px;
+    min-height: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.renting h1{
+    color: #FFC118;
+    font-weight: 1000;
+    font-size: 9rem;
+    text-align: justify;
+}
+
 
 /* --- Responsive de la web --- */
 @media (max-width: 768px) {

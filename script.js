@@ -380,7 +380,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         requestAnimationFrame(drawWave);
     }
-
+    
     drawWave();
 
+    $(document).ready(function() {
+        $('.card').click(function() {
+            $(this).toggleClass('flipped');
+        });
+    });
+    
 }); 
+
+// jQuery Card Flip Nuestros Valores
+
