@@ -1,382 +1,621 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PaseaDog - Cuidadores de Confianza para tu Perro</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Imagenes/Favicon.png">
+    <link rel="icon" type="image/png" href="Imagenes/Favicon.png" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-          crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<header class="bg-light p-3 border-bottom">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <header class="bg-light p-3 border-bottom">
     <div class="container d-flex justify-content-between align-items-center">
-        <h1 class="h4">NEIGHBORDOG <small class="text-muted fs-6">Safe</small></h1>
-        <!-- Botón para abrir el menú -->
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menuModal">
-            Menú
-        </button>
+      <h1 class="h4">NEIGHBORDOG <small class="text-muted fs-6">Safe</small></h1>
+      <!-- Botón para abrir el menú -->
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menuModal">
+        Menú
+      </button>
     </div>
-</header>
+  </header>
 
-
-
-<section id="full-image-section" class="position-relative">
-    <img src="Imagenes/MomentosFelices/cnne-1361799-las-5-razas-de-perro-mas-populares-en-estados-unidos.jpeg" 
-         alt="NeighborDog" class="w-100 h-100 object-fit-cover">
+  <section id="full-image-section" class="position-relative">
+    <img
+      src="Imagenes/MomentosFelices/cnne-1361799-las-5-razas-de-perro-mas-populares-en-estados-unidos.jpeg"
+      alt="NeighborDog"
+      class="w-100 h-100 object-fit-cover"
+    />
     <h1 class="image-title">NeighborDog</h1>
-</section>
+  </section>
 
-<section id="hero" class="text-center  bg-light rounded">
+  <section id="hero" class="text-center bg-light rounded">
     <h2 class="display-4 fw-bold">Viaja tranquilo, tu perro en buenas manos</h2>
-    <p class="lead my-3">Conectamos dueños de perros con cuidadores de confianza en tu comunidad. Amor y cuidado como en casa.</p>
+    <p class="lead my-3">
+      Conectamos dueños de perros con cuidadores de confianza en tu comunidad. Amor y
+      cuidado como en casa.
+    </p>
     <a href="#interactive-demo" class="btn btn-primary btn-lg">Descubre cómo funciona</a>
-</section>
+  </section>
 
-
-<section id="satisfied-clients" class="my-5 bg-light p-5 rounded">
+  <section id="satisfied-clients" class="my-5 bg-light p-5 rounded">
     <h2 class="text-center mb-4">Nuestros Clientes Peludos Satisfechos</h2>
-    <p class="text-center text-muted mb-4">¡Algunos de los amigos que han encontrado un segundo hogar!</p>
+    <p class="text-center text-muted mb-4">
+      ¡Algunos de los amigos que han encontrado un segundo hogar!
+    </p>
     <div id="dog-api-gallery" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-        <div class="col d-flex justify-content-center align-items-center" style="min-height: 200px;">
-            <div class="spinner-border text-primary" role="status">
-              <span class="visually-hidden">Cargando imágenes...</span>
-            </div>
+      <div
+        class="col d-flex justify-content-center align-items-center"
+        style="min-height: 200px"
+      >
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Cargando imágenes...</span>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<body>
+  <body>
     <!-- Modal del Menú -->
-<div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div
+      class="modal fade"
+      id="menuModal"
+      tabindex="-1"
+      aria-labelledby="menuModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="menuModalLabel">Menú de Navegación</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            </div>
-            <div class="modal-body">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a href="#hero" class="text-decoration-none text-dark">Inicio</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#how-it-works" class="text-decoration-none text-dark">¿Cómo Funciona?</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#satisfied-clients" class="text-decoration-none text-dark">Clientes Satisfechos</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#manual-gallery" class="text-decoration-none text-dark">Galería</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#interactive-demo" class="text-decoration-none text-dark">Demo Interactiva</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="menuModalLabel">Menú de Navegación</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <a href="#hero" class="text-decoration-none text-dark">Inicio</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#how-it-works" class="text-decoration-none text-dark"
+                  >¿Cómo Funciona?</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a href="#satisfied-clients" class="text-decoration-none text-dark"
+                  >Clientes Satisfechos</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a href="#manual-gallery" class="text-decoration-none text-dark"
+                  >Galería</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a href="#interactive-demo" class="text-decoration-none text-dark"
+                  >Demo Interactiva</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Cerrar
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<section id="mission-vision-values" class="d-flex flex-column justify-content-center align-items-center text-center bg-white vh-200">
-    <div class="container">
+    <section
+      id="mission-vision-values"
+      class="d-flex flex-column justify-content-center align-items-center text-center bg-white vh-200"
+    >
+      <div class="container">
         <h2 class="display-4 fw-bold mb-4">Nuestra Misión, Visión y Valores</h2>
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="p-4 border rounded shadow-sm">
-                    <h3 class="h5 fw-bold">Misión</h3>
-                    <p class="mt-3">Conectar a dueños de perros con cuidadores de confianza, asegurando el bienestar y felicidad de nuestras mascotas.</p>
-                </div>
+          <div class="col-md-4 mb-4">
+            <div class="p-4 border rounded shadow-sm">
+              <h3 class="h5 fw-bold">Misión</h3>
+              <p class="mt-3">
+                Conectar a dueños de perros con cuidadores de confianza, asegurando el
+                bienestar y felicidad de nuestras mascotas.
+              </p>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="p-4 border rounded shadow-sm">
-                    <h3 class="h5 fw-bold">Visión</h3>
-                    <p class="mt-3">Ser la plataforma líder en cuidado de mascotas, promoviendo comunidades más unidas y responsables.</p>
-                </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="p-4 border rounded shadow-sm">
+              <h3 class="h5 fw-bold">Visión</h3>
+              <p class="mt-3">
+                Ser la plataforma líder en cuidado de mascotas, promoviendo comunidades
+                más unidas y responsables.
+              </p>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="p-4 border rounded shadow-sm">
-                    <h3 class="h5 fw-bold">Valores</h3>
-                    <p class="mt-3">Amor, confianza, responsabilidad y compromiso con el bienestar animal.Amor, confianza, responsabilidad y compromiso con el bienestar animal.</p>
-                </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="p-4 border rounded shadow-sm">
+              <h3 class="h5 fw-bold">Valores</h3>
+              <p class="mt-3">
+                Amor, confianza, responsabilidad y compromiso con el bienestar
+                animal.Amor, confianza, responsabilidad y compromiso con el bienestar
+                animal.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="wave-section" class="d-flex justify-content-center align-items-center text-center">
-    <h1 class="wave-title">NeighborDog</h1>
-    <canvas id="wave-canvas"></canvas>
-</section>
+    <section
+      id="wave-section"
+      class="d-flex justify-content-center align-items-center text-center"
+    >
+      <h1 class="wave-title">NeighborDog</h1>
+      <canvas id="wave-canvas"></canvas>
+    </section>
 
-<section>
-    <div>
-       <img src="Imagenes\FireflyDog.jpg" alt="Entradaimagen" class="FireflyDog w-100 h-100 top-0 start-0"
-       style="width: auto; height: auto; object-fit: cover;">
-    </div>
-   </section>
+    <section>
+      <div>
+        <img
+          src="Imagenes\FireflyDog.jpg"
+          alt="Entradaimagen"
+          class="FireflyDog w-100 h-100 top-0 start-0"
+          style="width: auto; height: auto; object-fit: cover"
+        />
+      </div>
+    </section>
 
-
-<section>
-    <div class="container text-center my-5">
+    <section>
+      <div class="container text-center my-5">
         <h2 class="display-4 fw-bold">Miles de hogares para tu mejor amigo</h2>
-        <p class="lead">Somos la plataforma número uno en el cuidado de perros a nivel global desde 2025</p>
-        <a href="#how-it-works" class="btn btn-primary btn-lg">¡Ponte en contacto con nosotros!</a>
-    </div>
-</section>
-
-
+        <p class="lead">
+          Somos la plataforma número uno en el cuidado de perros a nivel global desde 2025
+        </p>
+        <a href="#how-it-works" class="btn btn-primary btn-lg"
+          >¡Ponte en contacto con nosotros!</a
+        >
+      </div>
+    </section>
 
     <main class="container">
-
-    
-        <section id="how-it-works" class="my-5">
-            <h2 class="text-center mb-4">¿Cómo Funciona?</h2>
-            <div class="row text-center">
-                <div class="col-md-4 mb-3">
-                    <div class="p-3 border rounded bg-light">
-                        <span class="fs-1">1️⃣</span>
-                        <h3 class="fs-5 mt-2">Describe tu Perro</h3>
-                        <p>Cuéntanos sobre su raza, comportamiento y necesidades.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="p-3 border rounded bg-light">
-                         <span class="fs-1">2️⃣</span>
-                        <h3 class="fs-5 mt-2">Encuentra Cuidadores</h3>
-                        <p>Te mostramos perfiles de cuidadores compatibles cerca de ti.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                   <div class="p-3 border rounded bg-light">
-                         <span class="fs-1">3️⃣</span>
-                        <h3 class="fs-5 mt-2">Conecta y Viaja</h3>
-                        <p>Contacta, conoce al cuidador y ¡disfruta de tus vacaciones!</p>
-                    </div>
-                </div>
+      <section id="how-it-works" class="my-5">
+        <h2 class="text-center mb-4">¿Cómo Funciona?</h2>
+        <div class="row text-center">
+          <div class="col-md-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+              <span class="fs-1">1️⃣</span>
+              <h3 class="fs-5 mt-2">Describe tu Perro</h3>
+              <p>Cuéntanos sobre su raza, comportamiento y necesidades.</p>
             </div>
-        </section>
-
-        <section id="dog-api-slider" class="position-relative overflow-hidden">
-            <div id="slider-container" class="w-100 h-100 position-absolute top-0 start-0">
-                <!-- Las imágenes se cargarán dinámicamente aquí -->
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+              <span class="fs-1">2️⃣</span>
+              <h3 class="fs-5 mt-2">Encuentra Cuidadores</h3>
+              <p>Te mostramos perfiles de cuidadores compatibles cerca de ti.</p>
             </div>
-        </section>
-
-        <section id="3d-models" class="my-5">
-            <h2 class="text-center mb-4">Explora Nuestros Modelos 3D</h2>
-            <p class="text-center text-muted mb-5">Interactúa con los modelos 3D de nuestros amigos peludos y descubre más sobre ellos.</p>
-            <div class="row text-center">
-                <div class="col-md-4 mb-4">
-                    <div class="p-3 border rounded bg-light shadow">
-                        <h5 class="mb-3">Modelo 1: Labrador</h5>
-                        <model-viewer src="models/Labrador.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/Labrador-poster.webp" shadow-intensity="1" exposure="1">
-                            <div class="progress-bar hide" slot="progress-bar">
-                                <div class="update-bar"></div>
-                            </div>
-                            <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
-                        </model-viewer>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="p-3 border rounded bg-light shadow">
-                        <h5 class="mb-3">Modelo 2: Golden Retriever</h5>
-                        <model-viewer src="models/GoldenRetriever.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/GoldenRetriever-poster.webp" shadow-intensity="1" exposure="0.91">
-                            <div class="progress-bar hide" slot="progress-bar">
-                                <div class="update-bar"></div>
-                            </div>
-                            <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
-                        </model-viewer>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="p-3 border rounded bg-light shadow">
-                        <h5 class="mb-3">Modelo 3: Bulldog</h5>
-                        <model-viewer src="models/Bulldog.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/Bulldog-poster.webp" shadow-intensity="1" exposure="0.91">
-                            <div class="progress-bar hide" slot="progress-bar">
-                                <div class="update-bar"></div>
-                            </div>
-                            <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
-                        </model-viewer>
-                    </div>
-                </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+              <span class="fs-1">3️⃣</span>
+              <h3 class="fs-5 mt-2">Conecta y Viaja</h3>
+              <p>Contacta, conoce al cuidador y ¡disfruta de tus vacaciones!</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="map" class="my-5">
-            <h2 class="text-center mb-4">Nuestra Ubicación</h2>
-        
-            <div class="ratio ratio-16x9 mx-auto" style="max-width: 1400px;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1067163.3106718822!2d-7.166019383551202!3d43.26895504865666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368cfa609eb09d%3A0xf8b5f32b7dc69e3a!2sPrincipado%20de%20Asturias%2C%20Asturias!5e1!3m2!1ses!2ses!4v1744482699387!5m2!1ses!2ses" style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </section>
+      <section id="dog-api-slider" class="position-relative overflow-hidden">
+        <div id="slider-container" class="w-100 h-100 position-absolute top-0 start-0">
+          <!-- Las imágenes se cargarán dinámicamente aquí -->
+        </div>
+      </section>
 
-    
-
-        <section id="manual-gallery" class="my-5">
-             <h2 class="text-center mb-4">Galería de Momentos Felices</h2>
-             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
-                 <div class="col">
-                    <div class="card">
-                        <img src="Imagenes\MomentosFelices\5cb1f9400891d9da5a4926d7814bd1b89127ecba-1300x867.webp" class="card-img-top" alt="Descripción de la imagen 1">
-                        <div class="card-body">
-                            <p class="card-text text-center">Descripción breve 1</p>
-                        </div>
-                    </div>
-                 </div>
-                 <div class="col">
-                    <div class="card">
-                        <img src="Imagenes\MomentosFelices\b0ee803a6e46-razas-de-perros-raras-a.avif" class="card-img-top" alt="Descripción de la imagen 2">
-                         <div class="card-body">
-                            <p class="card-text text-center">Descripción breve 2</p>
-                        </div>
-                    </div>
-                 </div>
-                 <div class="col">
-                     <div class="card">
-                        <img src="Imagenes\MomentosFelices\cnne-1361799-las-5-razas-de-perro-mas-populares-en-estados-unidos.jpeg" class="card-img-top" alt="Descripción de la imagen 3">
-                         <div class="card-body">
-                            <p class="card-text text-center">Descripción breve 3</p>
-                        </div>
-                    </div>
-                 </div>
-                 </div>
-        </section>
-
-        <section id="interactive-demo" class="my-5 p-5 bg-primary-subtle rounded">
-            <h2 class="text-center mb-5">Demo Interactiva: Encuentra el Match Perfecto</h2>
-            <div class="row g-5">
-                <div class="col-md-6">
-                    <h4>Describe a tu Perro</h4>
-                    <form id="dog-info-form">
-                        <div class="mb-3">
-                            <label for="dog-breed" class="form-label">Raza:</label>
-                            <select class="form-select" id="dog-breed" aria-label="Selector de raza de perro">
-                                <option selected>Cargando razas...</option>
-                                </select>
-                        </div>
-
-                        <div class="mb-3">
-                             <label class="form-label d-block">Comportamiento Principal:</label>
-                             <div id="dog-behavior-selector" class="btn-group" role="group" aria-label="Selector de comportamiento">
-                                <input type="radio" class="btn-check" name="behavior" id="behavior-calm" autocomplete="off" value="calm">
-                                <label class="btn btn-outline-primary" for="behavior-calm">Calmado</label>
-
-                                <input type="radio" class="btn-check" name="behavior" id="behavior-playful" autocomplete="off" value="playful">
-                                <label class="btn btn-outline-primary" for="behavior-playful">Juguetón</label>
-
-                                <input type="radio" class="btn-check" name="behavior" id="behavior-shy" autocomplete="off" value="shy">
-                                <label class="btn btn-outline-primary" for="behavior-shy">Tímido</label>
-
-                                 <input type="radio" class="btn-check" name="behavior" id="behavior-active" autocomplete="off" value="active">
-                                <label class="btn btn-outline-primary" for="behavior-active">Activo</label>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="dog-name" class="form-label">Nombre del perro:</label>
-                            <input type="text" class="form-control" id="dog-name" placeholder="Ej: Max, Luna...">
-                        </div>
-                        <div class="mb-3">
-                            <label for="dog-age" class="form-label">Edad (años):</label>
-                            <input type="number" class="form-control" id="dog-age" min="0" max="30">
-                        </div>
-                         <div class="mb-3">
-                            <label for="dog-extra-info" class="form-label">Notas adicionales (opcional):</label>
-                            <textarea class="form-control" id="dog-extra-info" rows="3" placeholder="Ej: Necesita medicación por la mañana, no le gustan los gatos..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success">Simular Búsqueda (WIP)</button>
-                    </form>
+      <section id="3d-models" class="my-5">
+        <h2 class="text-center mb-4">Explora Nuestros Modelos 3D</h2>
+        <p class="text-center text-muted mb-5">
+          Interactúa con los modelos 3D de nuestros amigos peludos y descubre más sobre
+          ellos.
+        </p>
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <div class="p-3 border rounded bg-light shadow">
+              <h5 class="mb-3">Modelo 1: Labrador</h5>
+              <model-viewer
+                src="models/Labrador.glb"
+                ar
+                ar-modes="webxr scene-viewer quick-look"
+                camera-controls
+                tone-mapping="neutral"
+                poster="models/Labrador-poster.webp"
+                shadow-intensity="1"
+                exposure="1"
+              >
+                <div class="progress-bar hide" slot="progress-bar">
+                  <div class="update-bar"></div>
                 </div>
-
-            
-                <div class="col-md-6">
-                    <h4>Visualización</h4>
-                    <div id="dog-visualization" class="border rounded p-3 text-center bg-light" style="min-height: 300px; display: flex; align-items: center; justify-content: center;">
-
-                
-                            
-                            
-                      
-
-                        
-                        <img id="dog-image-placeholder" src="https://via.placeholder.com/400x300/e8e8e8/6c757d?text=Selecciona+una+raza" class="img-fluid rounded" alt="Imagen de la raza seleccionada" style="max-height: 300px;">
-
-                         <div id="dog-info-display" class="mt-3 w-100">
-                             <p class="text-muted">Selecciona una raza y comportamiento para ver más.</p>
-                         </div>
-                    </div>
-                </div>
+                <button slot="ar-button" class="btn btn-primary btn-sm mt-3">
+                  Ver en tu espacio
+                </button>
+              </model-viewer>
             </div>
-        </section>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="p-3 border rounded bg-light shadow">
+              <h5 class="mb-3">Modelo 2: Golden Retriever</h5>
+              <model-viewer
+                src="models/GoldenRetriever.glb"
+                ar
+                ar-modes="webxr scene-viewer quick-look"
+                camera-controls
+                tone-mapping="neutral"
+                poster="models/GoldenRetriever-poster.webp"
+                shadow-intensity="1"
+                exposure="0.91"
+              >
+                <div class="progress-bar hide" slot="progress-bar">
+                  <div class="update-bar"></div>
+                </div>
+                <button slot="ar-button" class="btn btn-primary btn-sm mt-3">
+                  Ver en tu espacio
+                </button>
+              </model-viewer>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="p-3 border rounded bg-light shadow">
+              <h5 class="mb-3">Modelo 3: Bulldog</h5>
+              <model-viewer
+                src="models/Bulldog.glb"
+                ar
+                ar-modes="webxr scene-viewer quick-look"
+                camera-controls
+                tone-mapping="neutral"
+                poster="models/Bulldog-poster.webp"
+                shadow-intensity="1"
+                exposure="0.91"
+              >
+                <div class="progress-bar hide" slot="progress-bar">
+                  <div class="update-bar"></div>
+                </div>
+                <button slot="ar-button" class="btn btn-primary btn-sm mt-3">
+                  Ver en tu espacio
+                </button>
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+      </section>
 
-       
+      <section id="map" class="my-5 section-map">
+        <h2 class="text-center mb-4">Nuestra Ubicación</h2>
+        <!-- Navbar de mapa -->
+        <div class="container my-4 icon-bar">
+          <!-- Search Bar -->
+          <div class="d-flex align-items-center justify-content-between search-bar">
+            <input type="text" class="search-input me-3" placeholder="Buscar destinos" />
+            <input type="date" class="search-input me-3" />
+            <input type="date" class="search-input me-3" />
+            <input type="text" class="search-input me-3" placeholder="Añade viajeros" />
+            <button class="btn" type="submit">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="24 / basic / search">
+                  <path
+                    id="icon"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929L20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18ZM16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10Z"
+                    fill="black"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
 
+          <!-- Categories -->
+          <div class="d-flex overflow-auto mt-2">
+            <div class="category-item">
+              <div class="category-icon">🌊</div>
+              <small>A pie de playa</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏰</div>
+              <small>Castillos</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏠</div>
+              <small>Minicasas</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🛏️</div>
+              <small>Bed & Breakfast</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏞️</div>
+              <small>Lagos</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🌲</div>
+              <small>Casas rurales</small>
+            </div>
+            <!-- Agrega más categorías según necesites -->
+            <div class="category-item">
+              <div class="category-icon">⚙️</div>
+              <small>Filtros</small>
+            </div>
+          </div>
+        </div>
+        <div class="ratio ratio-16x9 mx-auto" style="max-width: 1400px">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1067163.3106718822!2d-7.166019383551202!3d43.26895504865666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368cfa609eb09d%3A0xf8b5f32b7dc69e3a!2sPrincipado%20de%20Asturias%2C%20Asturias!5e1!3m2!1ses!2ses!4v1744482699387!5m2!1ses!2ses"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </section>
+
+      <section id="manual-gallery" class="my-5">
+        <h2 class="text-center mb-4">Galería de Momentos Felices</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+          <div class="col">
+            <div class="card">
+              <img
+                src="Imagenes\MomentosFelices\5cb1f9400891d9da5a4926d7814bd1b89127ecba-1300x867.webp"
+                class="card-img-top"
+                alt="Descripción de la imagen 1"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Descripción breve 1</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="Imagenes\MomentosFelices\b0ee803a6e46-razas-de-perros-raras-a.avif"
+                class="card-img-top"
+                alt="Descripción de la imagen 2"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Descripción breve 2</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="Imagenes\MomentosFelices\cnne-1361799-las-5-razas-de-perro-mas-populares-en-estados-unidos.jpeg"
+                class="card-img-top"
+                alt="Descripción de la imagen 3"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Descripción breve 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="interactive-demo" class="my-5 p-5 bg-primary-subtle rounded">
+        <h2 class="text-center mb-5">Demo Interactiva: Encuentra el Match Perfecto</h2>
+        <div class="row g-5">
+          <div class="col-md-6">
+            <h4>Describe a tu Perro</h4>
+            <form id="dog-info-form">
+              <div class="mb-3">
+                <label for="dog-breed" class="form-label">Raza:</label>
+                <select
+                  class="form-select"
+                  id="dog-breed"
+                  aria-label="Selector de raza de perro"
+                >
+                  <option selected>Cargando razas...</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label d-block">Comportamiento Principal:</label>
+                <div
+                  id="dog-behavior-selector"
+                  class="btn-group"
+                  role="group"
+                  aria-label="Selector de comportamiento"
+                >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="behavior"
+                    id="behavior-calm"
+                    autocomplete="off"
+                    value="calm"
+                  />
+                  <label class="btn btn-outline-primary" for="behavior-calm"
+                    >Calmado</label
+                  >
+
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="behavior"
+                    id="behavior-playful"
+                    autocomplete="off"
+                    value="playful"
+                  />
+                  <label class="btn btn-outline-primary" for="behavior-playful"
+                    >Juguetón</label
+                  >
+
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="behavior"
+                    id="behavior-shy"
+                    autocomplete="off"
+                    value="shy"
+                  />
+                  <label class="btn btn-outline-primary" for="behavior-shy">Tímido</label>
+
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="behavior"
+                    id="behavior-active"
+                    autocomplete="off"
+                    value="active"
+                  />
+                  <label class="btn btn-outline-primary" for="behavior-active"
+                    >Activo</label
+                  >
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="dog-name" class="form-label">Nombre del perro:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="dog-name"
+                  placeholder="Ej: Max, Luna..."
+                />
+              </div>
+              <div class="mb-3">
+                <label for="dog-age" class="form-label">Edad (años):</label>
+                <input type="number" class="form-control" id="dog-age" min="0" max="30" />
+              </div>
+              <div class="mb-3">
+                <label for="dog-extra-info" class="form-label"
+                  >Notas adicionales (opcional):</label
+                >
+                <textarea
+                  class="form-control"
+                  id="dog-extra-info"
+                  rows="3"
+                  placeholder="Ej: Necesita medicación por la mañana, no le gustan los gatos..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">
+                Simular Búsqueda (WIP)
+              </button>
+            </form>
+          </div>
+
+          <div class="col-md-6">
+            <h4>Visualización</h4>
+            <div
+              id="dog-visualization"
+              class="border rounded p-3 text-center bg-light"
+              style="
+                min-height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                id="dog-image-placeholder"
+                src="https://via.placeholder.com/400x300/e8e8e8/6c757d?text=Selecciona+una+raza"
+                class="img-fluid rounded"
+                alt="Imagen de la raza seleccionada"
+                style="max-height: 300px"
+              />
+
+              <div id="dog-info-display" class="mt-3 w-100">
+                <p class="text-muted">
+                  Selecciona una raza y comportamiento para ver más.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sección transporte de mascotas -->
+      <section class="my-5 section-transporte">
+        <div class="container col-10">
+          <h2 class="text-center">Sección transporte de mascotas</h2>
+          <div class="row">
+            <img src="/Imagenes/pet-travel.jpg" alt="pet-travel-img" width="100%" />
+          </div>
+        </div>
+      </section>
     </main>
 
-   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-4">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">NeighborDog</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#how-it-works">¿Cómo Funciona?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#satisfied-clients">Clientes Satisfechos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#manual-gallery">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#interactive-demo">Demo Interactiva</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-4">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="#">NeighborDog</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#hero">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#how-it-works">¿Cómo Funciona?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#satisfied-clients">Clientes Satisfechos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#manual-gallery">Galería</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#interactive-demo">Demo Interactiva</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <footer class="container text-center text-muted py-4 mt-5 border-top">
+      <p>
+        &copy; <span id="current-year"></span> PaseaDog - Todos los derechos reservados
+        (Proyecto Demo)
+      </p>
+    </footer>
 
-
-
-        <footer class="container text-center text-muted py-4 mt-5 border-top">
-            <p>&copy; <span id="current-year"></span> PaseaDog - Todos los derechos reservados (Proyecto Demo)</p>
-            </footer>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-
-   
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-``` 
+```
