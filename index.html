@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,18 +24,22 @@
       rel="stylesheet"
     />
   </head>
-  <header class="bg-light p-3 border-bottom">
+  <header class="bg-light p-3 border-bottom" data-bs-theme="dark">
     <div class="container d-flex justify-content-between align-items-center">
       <h1 class="h4">NEIGHBORDOG <small class="text-muted fs-6">Safe</small></h1>
       <!-- Botón para abrir el menú -->
       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menuModal">
         Menú
       </button>
+      <div class="dropdown" data-bs-theme="dark">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
+          Dark dropdown
+        </button>
     </div>
   </header>
 
   <!-- HERO BANNER DOG -->
-  <section id="full-image-section" class="position-relative">
+  <section id="full-image-section" class="position-relative" data-bs-theme="dark">
     <img
       src="Imagenes/MomentosFelices/cnne-1361799-las-5-razas-de-perro-mas-populares-en-estados-unidos.jpeg"
       alt="NeighborDog"
@@ -45,7 +49,7 @@
   </section>
 
 <!-- CALL TO ACTION 1 -->
-  <section id="hero" class="text-center bg-light rounded">
+  <section id="hero" class="text-center bg-light rounded" data-bs-theme="dark">
     <h2 class="display-4 fw-bold">Viaja tranquilo, tu perro en buenas manos</h2>
     <p class="lead my-3">
       Conectamos dueños de perros con cuidadores de confianza en tu comunidad. Amor y
@@ -55,7 +59,7 @@
   </section>
 
 <!-- API IMAGES -->
-  <section id="satisfied-clients" class="my-5 bg-light p-5 rounded">
+  <section id="satisfied-clients" class="my-5 bg-light p-5 rounded" data-bs-theme="dark">
     <h2 class="text-center mb-4">Nuestros Clientes Peludos Satisfechos</h2>
     <p class="text-center text-muted mb-4">
       ¡Algunos de los amigos que han encontrado un segundo hogar!
@@ -73,12 +77,11 @@
   </section>
 
   <!-- BIG TEXT -->
-  <section class="renting">
+  <section class="renting" data-bs-theme="dark">
     <h1>Disfruta de las ventajas que podemos ofrecerte a ti y a tu mejor amigo.</h1>
 </section>
 
-  <body>
-    <!-- Modal del Menú -->
+  <body data-bs-theme="dark">
     <div
       class="modal fade"
       id="menuModal"
@@ -136,13 +139,13 @@
     <!-- MISIÓN VISIÓN Y VALORES -->
     <section
       id="mission-vision-values"
-      class="d-flex flex-column justify-content-center align-items-center text-center bg-white vh-200"
+      class="d-flex flex-column justify-content-center align-items-center text-center bg-white vh-200" data-bs-theme="dark"
     >
       <div class="container">
-        <h2 class="display-4 fw-bold mb-4">Nuestra Misión, Visión y Valores</h2>
+        <h2 class="display-4 fw-bold mb-4" data-bs-theme="dark">Nuestra Misión, Visión y Valores</h2>
         <div class="row">
           <div class="col-md-4 mb-4">
-            <div class="p-4 border rounded shadow-sm">
+            <div class="p-4 border rounded shadow-sm" data-bs-theme="dark">
               <h3 class="h5 fw-bold">Misión</h3>
               <p class="mt-3">
                 Conectar a dueños de perros con cuidadores de confianza, asegurando el
@@ -150,7 +153,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-bs-theme="dark">
             <div class="p-4 border rounded shadow-sm">
               <h3 class="h5 fw-bold">Visión</h3>
               <p class="mt-3">
@@ -159,7 +162,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-bs-theme="dark">
             <div class="p-4 border rounded shadow-sm">
               <h3 class="h5 fw-bold">Valores</h3>
               <p class="mt-3">
@@ -176,7 +179,7 @@
     <!-- WAVE ANIMATION -->
     <section
       id="wave-section"
-      class="d-flex justify-content-center align-items-center text-center"
+      class="d-flex justify-content-center align-items-center text-center" data-bs-theme="dark"
     >
       <h1 class="wave-title">NeighborDog</h1>
       <canvas id="wave-canvas"></canvas>
@@ -195,8 +198,8 @@
     </section>
 
     <!-- CALL TO ACTION 2 -->
-    <section>
-      <div class="container text-center my-5">
+    <section >
+      <div class="container text-center my-5" data-bs-theme="dark">
         <h2 class="display-4 fw-bold">Miles de hogares para tu mejor amigo</h2>
         <p class="lead">
           Somos la plataforma número uno en el cuidado de perros a nivel global desde 2025
@@ -208,7 +211,7 @@
     </section>
 
     <!-- CÓMO FUNCIONA -->
-    <main class="container">
+    <main class="container" data-bs-theme="dark">
       <section id="how-it-works" class="my-5">
         <h2 class="text-center mb-4">¿Cómo Funciona?</h2>
         <div class="row text-center">
@@ -237,55 +240,61 @@
       </section>
 
       <!-- GALERÍA API -->
-      <section id="dog-api-slider" class="position-relative overflow-hidden">
+      <section id="dog-api-slider" class="position-relative overflow-hidden" data-bs-theme="dark">
         <div id="slider-container" class="w-100 h-100 position-absolute top-0 start-0">
           <!-- Las imágenes se cargarán dinámicamente aquí -->
         </div>
       </section>
 
       <!-- MODELOS 3D -->
-      <section id="3d-models" class="my-5">
+      <section id="3d-models" class="my-5" data-bs-theme="dark">
         <h2 class="text-center mb-4">Explora Nuestros Modelos 3D</h2>
         <p class="text-center text-muted mb-5">Interactúa con los modelos 3D de nuestros amigos peludos y descubre más sobre ellos.</p>
         <div class="row text-center">
-            <div class="col-md-4 mb-4">
+            <div class="row mb-4">
                 <div class="p-3 border rounded bg-light shadow">
                     <h5 class="mb-3">Modelo 1: Labrador</h5>
+                    <div class="container row text-center">
                     <model-viewer src="models/Dog0.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/Labrador-poster.webp" shadow-intensity="1" exposure="1">
                         <div class="progress-bar hide" slot="progress-bar">
                             <div class="update-bar"></div>
                         </div>
                         <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
                     </model-viewer>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="row mb-4">
                 <div class="p-3 border rounded bg-light shadow">
                     <h5 class="mb-3">Modelo 2: Golden Retriever</h5>
+                    <div class="container row text-center">
                     <model-viewer src="models/Dog1.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/GoldenRetriever-poster.webp" shadow-intensity="1" exposure="0.91">
                         <div class="progress-bar hide" slot="progress-bar">
                             <div class="update-bar"></div>
                         </div>
                         <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
                     </model-viewer>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="row mb-4">
                 <div class="p-3 border rounded bg-light shadow">
                     <h5 class="mb-3">Modelo 3: Bulldog</h5>
+                    <div class="container row text-center">
                     <model-viewer src="models/Dog2.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/Bulldog-poster.webp" shadow-intensity="1" exposure="0.91">
                         <div class="progress-bar hide" slot="progress-bar">
                             <div class="update-bar"></div>
                         </div>
                         <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
                     </model-viewer>
+                  </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- GOOGLE MAPS -->
-      <section id="map" class="my-5 section-map">
+      <section id="map" class="my-5 section-map" data-bs-theme="dark">
         <h2 class="text-center mb-4">Nuestra Ubicación</h2>
         <!-- Navbar de mapa -->
         <div class="container my-4 icon-bar">
@@ -349,7 +358,7 @@
             </div>
           </div>
         </div>
-        <div class="ratio ratio-16x9 mx-auto" style="max-width: 1400px">
+        <div class="ratio ratio-16x9 mx-auto" style="max-width: 1400px" data-bs-theme="dark">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1067163.3106718822!2d-7.166019383551202!3d43.26895504865666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368cfa609eb09d%3A0xf8b5f32b7dc69e3a!2sPrincipado%20de%20Asturias%2C%20Asturias!5e1!3m2!1ses!2ses!4v1744482699387!5m2!1ses!2ses"
             style="border: 0"
@@ -362,7 +371,7 @@
       </section>
 
       <!-- FLIP CARDS -->
-      <div class="main-container">
+      <div class="main-container" data-bs-theme="dark">
         <!-- <h1 class="main-title">Nuestros Valores</h1>
         <h2 class="main-title2">Haga click en las distintas cartas:</h2> -->
         <div class="valores-container">
@@ -414,7 +423,7 @@
     </div>
 
     <!-- GALERÍA MOMENTOS FELICES -->
-      <section id="manual-gallery" class="my-5">
+      <section id="manual-gallery" class="my-5" data-bs-theme="dark">
         <h2 class="text-center mb-4">Galería de Momentos Felices</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
           <div class="col">
@@ -457,7 +466,7 @@
       </section>
 
       <!-- DEMO INTERACTIVA -->
-      <section id="interactive-demo" class="my-5 p-5 bg-primary-subtle rounded">
+      <section id="interactive-demo" class="my-5 p-5 bg-primary-subtle rounded" data-bs-theme="dark">
         <h2 class="text-center mb-5">Demo Interactiva: Encuentra el Match Perfecto</h2>
         <div class="row g-5">
           <div class="col-md-6">
@@ -590,16 +599,115 @@
         </div>
       </section>
 
+      <!-- BIG TEXT -->
+  <section class="renting" data-bs-theme="dark">
+    <h1>El transporte de mascotas nunca había sido tan sencillo y cómodo</h1>
+</section>
+
       <!-- Sección transporte de mascotas -->
       <section class="my-5 section-transporte">
         <div class="container col-10">
-          <h2 class="text-center">Sección transporte de mascotas</h2>
+          <h2 class="text-center">TRANSPORTES INTERNACIONALES</h2>
           <div class="row">
             <img src="/Imagenes/pet-travel.jpg" alt="pet-travel-img" width="100%" />
           </div>
         </div>
       </section>
+
+        <!-- Navbar de mapa -->
+        <div class="container my-4 icon-bar">
+          <!-- Search Bar -->
+          <div class="d-flex align-items-center justify-content-between search-bar">
+            <input type="text" class="search-input me-3" placeholder="Buscar destinos" />
+            <input type="date" class="search-input me-3" />
+            <input type="date" class="search-input me-3" />
+            <input type="text" class="search-input me-3" placeholder="Añade viajeros" />
+            <button class="btn" type="submit">
+            </button>
+          </div>
+
+      <!-- FLIP CARDS -->
+      <div class="main-container" data-bs-theme="dark">
+        <!-- <h1 class="main-title">Nuestros Valores</h1>
+        <h2 class="main-title2">Haga click en las distintas cartas:</h2> -->
+        <div class="valores-container">
+            <!-- CONTACTO Card -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        CONTACTO
+                    </div>
+                    <div class="card-back">
+                        <h2 class="cardtitle">CONTACTO</h2>
+                        <div class="content">
+                            Nos enfocamos en ofrecer vehículos que proporcionen una conducción suave y sin esfuerzo, para que cada trayecto sea una experiencia cómoda y placentera. La tecnología avanzada en suspensión y aerodinámica asegura un manejo fluido y sin interrupciones.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OFICINAS Card -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                      OFICINAS
+                    </div>
+                    <div class="card-back">
+                        <h2 class="cardtitle">OFICINAS</h2>
+                        <div class="content">
+                            Nuestros coches están diseñados para ofrecer un desempeño excepcional con una acceleración rápida y control preciso. Cada modelo combina potencia, seguridad y agilidad, permitiendo a los conductores disfrutar de la velocidad con total confianza.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAREERS Card -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                      CAREERS
+                    </div>
+                    <div class="card-back">
+                        <h2 class="cardtitle">CAREERS</h2>
+                        <div class="content">
+                            El diseño de nuestros vehículos refleja sofisticación, innovación y distinción, creando coches que son tanto funcionales como una declaración de estilo. Trabajamos con los mejores diseñadores para lograr la perfecta armonía entre belleza, ergonomía y funcionalidad.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </main>
+
+    <section >
+      <div class="container text-center my-5">
+        <title> CONTACTO </title>
+        <h2 class="display-4 fw-bold">Contacta con nosotros para cualquier necesidad de tu mejor amigo</h2>
+        <p class="lead">
+          Somos la plataforma número uno en el cuidado de perros a nivel global desde 2025
+        </p>
+        <a href="#how-it-works" class="btn btn-primary btn-lg"
+          >¡Ponte en contacto con nosotros!</a>
+          <button class="btn btn-primary" >CALL US</button>
+          <div class=></div>
+          <form>
+            <div class="mb-3" >
+              <label for="exampleInputEmail1" class="form-label">Dirección email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Nunca compartiremos esta información con nadie.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Número de teléfono</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+      </div>
+    </section>
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-4">
@@ -638,11 +746,13 @@
       </div>
     </nav>
 
+  
+
     <!-- FOOTER -->
     <footer class="container text-center text-muted py-4 mt-5 border-top">
       <p>
         &copy; <span id="current-year"></span> PaseaDog - Todos los derechos reservados
-        (Proyecto Demo)
+        (Ricardo y Álvaro)
       </p>
     </footer>
 
