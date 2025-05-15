@@ -108,7 +108,52 @@ document.addEventListener('DOMContentLoaded', () => {
         dogInfoDisplay.innerHTML = `<p class="text-danger">No se pudo cargar la imagen.</p>`;
       }
     }
-  
+
+    // Dog Slider GALERIA IMAGENES API 
+  const sliderContainer = document.getElementById('slider-container');
+  const numImages = 5; // Número de imágenes a rotar
+  const intervalTime = 4000; // Tiempo entre imágenes (ms)
+  let currentIndex = 0;
+  let images = [];
+
+  async function fetchDogImages(count) {
+    const urls = [];
+    for (let i = 0; i < count; i++) {
+      const res = await fetch('https://dog.ceo/api/breeds/image/random');
+      const data = await res.json();
+      urls.push(data.message);
+    }
+    return urls;
+  }
+
+  function createImageElement(src, index) {
+    const img = document.createElement('img');
+    img.src = src;
+    img.className = 'position-absolute top-0 start-0 w-100 h-100 object-fit-cover transition-opacity';
+    img.style.opacity = index === 0 ? '1' : '0';
+    img.style.transition = 'opacity 1s ease-in-out';
+    return img;
+  }
+
+  function startSlider() {
+    setInterval(() => {
+      const total = images.length;
+      images[currentIndex].style.opacity = '0';
+      currentIndex = (currentIndex + 1) % total;
+      images[currentIndex].style.opacity = '1';
+    }, intervalTime);
+  }
+
+  // Inicializar la galería
+  fetchDogImages(numImages).then(urls => {
+    urls.forEach((url, i) => {
+      const imgEl = createImageElement(url, i);
+      sliderContainer.appendChild(imgEl);
+      images.push(imgEl);
+    });
+    startSlider();
+  });
+
     // --- Capitalizar texto ---
     function capitalize(str) {
       return str.charAt(0).toUpperCase() + str.slice(1);
