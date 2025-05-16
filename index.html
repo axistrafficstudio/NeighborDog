@@ -25,48 +25,45 @@
     />
   </head>
 
-  <header class="header navbar-expand-lg  navbar-light bg-light sticky-top mx-auto ml -5 mr -5 ">
-    <nav class="navbar navbar-expand-lg  navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="#">
-    <img src="Imagenes\logo.png" width="80" height="70"  alt="">
-    WELCOME
-  </a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <form class="form-inline">
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">@</span>
-      </div>
-      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  <header>
+<nav class="navbar navbar-expand-lg bg-body-tertiary ">
+  <div class="container-fluid">
+     <a class="navbar-brand" href="#">
+      <img src="Imagenes\whitelogo.png" alt="Bootstrap" width="100" height="90">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-  </form>
+  </div>
 </nav>
   </header>
 
@@ -101,6 +98,14 @@
     </p>
     <a href="#interactive-demo" class="btn btn-primary btn-lg">Descubre cómo funciona</a>
   </section>
+
+  <!-- AI IMAGE -->
+    <section>
+      <div>
+        <img src="Imagenes\banner cuadrado.png" alt="Entradaimagen" class="FireflyDog w-100 h-100" style="object-fit: cover;" />
+      </div>
+    </section>
+
 
 
   <!-- GOOGLE MAPS -->
@@ -180,6 +185,54 @@
         </div>
       </section>
 
+       <!-- MODELOS 3D -->
+      <section id="3d-models" class="container justify-content-center" data-bs-theme="dark">
+        <h2 class="text-center mb-4">Explora Nuestros Modelos 3D</h2>
+        <p class="text-center text-muted mb-5">Interactúa con los modelos 3D de nuestros amigos peludos y descubre más sobre ellos.</p>
+        <div class="row text-center">
+            <div class="col mb-4">
+                <div class="p-3 border rounded bg-light shadow">
+                    <h5 class="mb-3">Modelo 1: Labrador</h5>
+                    <div class="container d-flex justify-content-center">
+                    <model-viewer src="models/Dog0.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/Labrador-poster.webp" shadow-intensity="1" exposure="1">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
+                    </model-viewer>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="p-3 border rounded bg-light shadow">
+                    <h5 class="mb-3">Modelo 2: Golden Retriever</h5>
+                    <div class="container d-flex justify-content-center">
+                    <model-viewer src="models/Dog1.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/GoldenRetriever-poster.webp" shadow-intensity="1" exposure="0.91">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
+                    </model-viewer>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="p-3 border rounded bg-light shadow">
+                    <h5 class="mb-3">Modelo 3: Bulldog</h5>
+                    <div class="container d-flex justify-content-center">
+                    <model-viewer src="models/Dog2.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/Bulldog-poster.webp" shadow-intensity="1" exposure="0.91">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
+                    </model-viewer>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 <!-- CALL TO ACTION 1 -->
   <section id="hero" class="text-center bg-light rounded" data-bs-theme="dark">
     <h2 class="display-4 fw-bold">Confiado por cientos de miles, amigos y humanos</h2>
@@ -188,6 +241,13 @@
     </p>
     <a href="#interactive-demo" class="btn btn-primary btn-lg">Descubre cómo funciona</a>
   </section>
+
+  <!-- AI IMAGE -->
+    <section>
+      <div>
+        <img src="Imagenes\banner horizontal.png" alt="Entradaimagen" class="FireflyDog w-100 h-100" style="object-fit: cover;" />
+      </div>
+    </section>
 
 <!-- API IMAGES -->
   <section id="satisfied-clients" class="my-5 bg-light p-5 rounded" data-bs-theme="dark">
@@ -319,21 +379,6 @@
       </div>
     </section>
 
-    <!-- WAVE ANIMATION -->
-    <section
-      id="wave-section"
-      class="d-flex justify-content-center align-items-center text-center" data-bs-theme="dark"
-    >
-      <h1 class="wave-title">NeighborDog</h1>
-      <canvas id="wave-canvas"></canvas>
-    </section>
-
-    <!-- AI IMAGE -->
-    <section>
-      <div>
-        <img src="Imagenes/FireflyDog.jpg" alt="Entradaimagen" class="FireflyDog w-100 h-100" style="object-fit: cover;" />
-      </div>
-    </section>
 
     <!-- CALL TO ACTION 2 -->
     <section >
@@ -382,57 +427,8 @@
         </div>
       </section>
 
-      <!-- MODELOS 3D -->
-      <section id="3d-models" class="my-5" data-bs-theme="dark">
-        <h2 class="text-center mb-4">Explora Nuestros Modelos 3D</h2>
-        <p class="text-center text-muted mb-5">Interactúa con los modelos 3D de nuestros amigos peludos y descubre más sobre ellos.</p>
-        <div class="row text-center">
-            <div class="col mb-4">
-                <div class="p-3 border rounded bg-light shadow">
-                    <h5 class="mb-3">Modelo 1: Labrador</h5>
-                    <div class="container d-flex justify-content-center">
-                    <model-viewer src="models/Dog0.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/Labrador-poster.webp" shadow-intensity="1" exposure="1">
-                        <div class="progress-bar hide" slot="progress-bar">
-                            <div class="update-bar"></div>
-                        </div>
-                        <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
-                    </model-viewer>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="p-3 border rounded bg-light shadow">
-                    <h5 class="mb-3">Modelo 2: Golden Retriever</h5>
-                    <div class="container d-flex justify-content-center">
-                    <model-viewer src="models/Dog1.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/GoldenRetriever-poster.webp" shadow-intensity="1" exposure="0.91">
-                        <div class="progress-bar hide" slot="progress-bar">
-                            <div class="update-bar"></div>
-                        </div>
-                        <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
-                    </model-viewer>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="p-3 border rounded bg-light shadow">
-                    <h5 class="mb-3">Modelo 3: Bulldog</h5>
-                    <div class="container d-flex justify-content-center">
-                    <model-viewer src="models/Dog2.glb.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/Bulldog-poster.webp" shadow-intensity="1" exposure="0.91">
-                        <div class="progress-bar hide" slot="progress-bar">
-                            <div class="update-bar"></div>
-                        </div>
-                        <button slot="ar-button" class="btn btn-primary btn-sm mt-3">Ver en tu espacio</button>
-                    </model-viewer>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-
       <!-- FLIP CARDS -->
-      <div class="main-container" data-bs-theme="dark">
+      <div class="main-container">
         <!-- <h1 class="main-title">Nuestros Valores</h1>
         <h2 class="main-title2">Haga click en las distintas cartas:</h2> -->
         <div class="valores-container">
@@ -484,7 +480,7 @@
     </div>
 
     <!-- GALERÍA MOMENTOS FELICES -->
-      <section id="manual-gallery" class="my-5" data-bs-theme="dark">
+      <section id="manual-gallery" class="my-5">
         <h2 class="text-center mb-4">Galería de Momentos Felices</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
           <div class="col">
@@ -527,7 +523,7 @@
       </section>
 
       <!-- DEMO INTERACTIVA -->
-      <section id="interactive-demo" class="my-5 p-5 bg-primary-subtle rounded" data-bs-theme="dark">
+      <section id="interactive-demo" class="my-5 p-5 bg-primary-subtle rounded">
         <h2 class="text-center mb-5">Demo Interactiva: Encuentra el Match Perfecto</h2>
         <div class="row g-5">
           <div class="col-md-6">
@@ -589,22 +585,11 @@
       </section>
 
       <!-- BIG TEXT -->
-  <section class="renting" data-bs-theme="dark">
+  <section class="renting">
     <h1>Disfruta de las ventajas que podemos ofrecerte a ti y a tu mejor amigo.</h1>
 </section>
 
   
-
-
-      <!-- Sección transporte de mascotas -->
-      <section class="my-5 section-transporte">
-        <div class="container col-10">
-          <h2 class="text-center">TRANSPORTES INTERNACIONALES</h2>
-          <div class="row">
-            <img src="/Imagenes/pet-travel.jpg" alt="pet-travel-img" width="100%" />
-          </div>
-        </div>
-      </section>
 
         <!-- Navbar de mapa -->
         <div class="container my-4 icon-bar">
