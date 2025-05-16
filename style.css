@@ -5,7 +5,77 @@ body {
     color: #333; 
 }
 
+/* Contact Form */
 
+.contact-form {
+    background-color:#FFC118;
+    color: #FFC118;
+    padding: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entradaformulario{
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.contact-container {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    background-color:rgb(252, 186, 218);
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(226, 154, 61);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(129, 188, 196);
+}
 
 .btn-primary {
     background-color: #FFC118; 
