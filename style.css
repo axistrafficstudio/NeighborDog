@@ -19,15 +19,7 @@ section {
     margin-bottom: 3rem;
 }
 
-/* NavBar */
-#navbar { /* Este ID no parece estar usándose en el HTML, el nav es un <header> */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: #FFC118;
-}
+
 
 .navbar-brand {
     color: #ff7f50;
@@ -152,6 +144,12 @@ section {
     align-items: center;
 }
 
+.a.nav-link {
+    color: #FFC118; 
+}
+
+
+
 .entradaformulario {
     display: flex;
     flex-direction: column;
@@ -176,35 +174,33 @@ section {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #333; /* Asegurar color */
+    color: #333; 
 }
 
-label { /* Estilo general para labels, podría ser más específico */
+label { 
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    color: #333; /* Asegurar color */
+    color: #333; 
 }
 
-input, textarea { /* Estilo general, podría ser más específico */
+input, textarea { 
     width: 95%;
     padding: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #444;
     background-color:rgba(228, 185, 43, 0.671);
-    color: white; /* El texto dentro del input será blanco */
+    color: white; 
     border-radius: 5px;
     font-size: 1rem;
 }
 
 input::placeholder, textarea::placeholder {
-    color: rgba(255, 255, 255, 0.8); /* Color de placeholder más claro */
+    color: rgba(255, 255, 255, 0.8); 
 }
 
-/* Botones */
-/* Este es un selector muy general. Si es para el botón del formulario de contacto, usa su ID o clase */
-button, .btn { /* Aplicado también a .btn para consistencia con Bootstrap */
-    /* width: 100%; No todos los botones deben ser full-width */
+
+button, .btn { 
     padding: 1rem;
     background-color: rgb(226, 154, 61);
     color: white;
@@ -213,28 +209,28 @@ button, .btn { /* Aplicado también a .btn para consistencia con Bootstrap */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    text-decoration: none; /* Para los .btn que son <a> */
+    text-decoration: none; 
 }
 
 button:hover, .btn:hover {
-    background-color: rgb(129, 188, 196);
-    color: white; /* Asegurar que el color del texto se mantenga en hover */
+    background-color: rgb(233, 203, 32);
+    color: white; 
 }
 
-.btn-primary { /* Estilos específicos para botones primarios de Bootstrap */
+.btn-primary { 
     background-color: #FFC118;
     color: white;
     border: none;
 }
 .btn-primary:hover {
-    background-color: #e0a800; /* Un tono más oscuro de amarillo para el hover */
+    background-color: #e0a800; 
 }
 
-.btn-secondary { /* Para el botón de enviar del formulario de contacto */
+.btn-secondary { 
      background-color: rgb(226, 154, 61);
 }
 .btn-secondary:hover {
-    background-color: rgb(129, 188, 196);
+    background-color: rgb(233, 203, 32);
 }
 
 
@@ -242,13 +238,12 @@ button:hover, .btn:hover {
 #mission-vision-values {
     background-color: #ffffff;
     color: #333333;
-    /* height: 30vh;  Quitar altura fija para que el contenido la defina */
     width: 100%;
-    display: flex; /* Ya usa Bootstrap para layout, esto puede no ser necesario aquí */
+    display: flex; 
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem 0; /* Añadir padding vertical */
+    padding: 2rem 0; 
 }
 
 #mission-vision-values h2,
@@ -405,6 +400,7 @@ button:hover, .btn:hover {
     transform: rotateY(180deg);
 }
 
+
 .card-front, .card-back {
     position: absolute;
     width: 100%;
@@ -414,6 +410,15 @@ button:hover, .btn:hover {
     padding: 20px;
     box-sizing: border-box;
     color: #333; /* Color de texto por defecto para las cards */
+}
+
+#botondark {
+    background-color: #FFC118;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .card-front {
@@ -637,7 +642,7 @@ footer p {
 }
 
 .search-bar { /* Barra de búsqueda dentro de .icon-bar */
-    background: #fff;
+    background: #252525;
     padding: 15px;
     border-radius: 40px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);

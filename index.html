@@ -35,9 +35,9 @@
   </head>
 
 
-  <header class="sticky-top bg-body-tertiary" >
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-  <div class="container-fluid">
+  <header class=" bg-body-tertiary fixed-top" >
+<nav class="navbar navbar-expand-lg bg-body-tertiary ">
+  <div class="container-fluid ">
      <a class="navbar-brand" href="#">
       <img src="Imagenes\whitelogo.png" alt="Bootstrap" width="100" height="90">
     </a>
@@ -50,26 +50,34 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href=#mission-vision-values>Sobre nosotros</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Secciones Interactivas
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">3d-models</a></li>
+            <li><a class="dropdown-item" href="#">Buscador</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href=#interactive-demo>Demo Virtual</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link" aria-disabled="true" href=#contacto>Contacto</a>
+          
         </li>
+          
+        <div>
+        <li>
+          <button type="button" id="botondark" class="btn btn-primary btn-xs"> DarkMode </button>
+        </li>
+        </div>
+
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success " type="submit">Search</button>
       </form>
     </div>
   </div>
@@ -77,7 +85,7 @@
   </header>
 
 
-<body>
+<body class="mt-5 p-5 " data-bs-theme="dark">
     <!-- HERO BANNER -->
      <section class=" hero banner container mt-5">
    <div class="container">
@@ -126,7 +134,7 @@
 
   <section id="satisfied-clients" class="my-5 bg-light p-5 rounded" data-bs-theme="dark">
     <h2 class="text-center mb-4">Nuestros Clientes Peludos Satisfechos</h2>
-    <p class="text-center text-muted mb-4">
+    <p id="textogaleriapi"  class="text-center mb-4">
       ¡Algunos de los amigos que han encontrado un segundo hogar!
     </p>
     <div id="dog-api-gallery" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
@@ -201,7 +209,99 @@
     <h1>Disfruta de las ventajas que podemos ofrecerte a ti y a tu mejor amigo.</h1>
 </section>
 
+<!-- MAPA -->
 
+      <section id="map" class="my-5 section-map">
+        <h2 class="text-center mb-4">Nuestra Ubicación</h2>
+        <!-- Navbar de mapa -->
+        <div class="container my-4 icon-bar">
+          <!-- Search Bar -->
+          <div class="d-flex align-items-center justify-content-between search-bar">
+            <input type="text" class="search-input me-3" placeholder="Buscar destinos" />
+            <input type="date" class="search-input me-3" />
+            <input type="date" class="search-input me-3" />
+            <input type="text" class="search-input me-3" placeholder="Añade viajeros" />
+            <button class="btn" type="submit">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="24 / basic / search">
+                  <path
+                    id="icon"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929L20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18ZM16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10Z"
+                    fill="black"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Categories -->
+          <div class="d-flex overflow-auto mt-2">
+            <div class="category-item">
+              <div class="category-icon">🌊</div>
+              <small>A pie de playa</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏞️</div>
+              <small>En la montaña</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏙️</div>
+              <small>En la ciudad</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏖️</div>
+              <small>En la costa</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏕️</div>
+              <small>Camping</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏝️</div>
+              <small>Islas</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏔️</div>
+              <small>Montañas</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏞️</div>
+              <small>Parques</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏖️</div>
+              <small>Playas</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏙️</div>
+              <small>Ciudades</small>
+            </div>
+            <div class="category-item">
+              <div class="category-icon">🏕️</div>
+              <small>Camping</small>
+        </section>
+
+         <section id="map" class="my-5">
+            <h2 class="text-center mb-4">Nuestra Ubicación</h2>
+        
+            <div class="ratio ratio-16x9 mx-auto" style="max-width: 1400px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1067163.3106718822!2d-7.166019383551202!3d43.26895504865666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368cfa609eb09d%3A0xf8b5f32b7dc69e3a!2sPrincipado%20de%20Asturias%2C%20Asturias!5e1!3m2!1ses!2ses!4v1744482699387!5m2!1ses!2ses" style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+          </div>
+        </div>
+      </section>
 
    <!-- AI IMAGE -->
     <section>
@@ -687,13 +787,26 @@
     </section>
 
 
-    
+    <!-- MAPA CONTACTO -->
+     <section id="map" class="my-5">
+            <h2 class="text-center mb-4">Nuestra Ubicación</h2>
+        
+            <div class="ratio ratio-16x9 mx-auto" style="max-width: 1400px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1067163.3106718822!2d-7.166019383551202!3d43.26895504865666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368cfa609eb09d%3A0xf8b5f32b7dc69e3a!2sPrincipado%20de%20Asturias%2C%20Asturias!5e1!3m2!1ses!2ses!4v1744482699387!5m2!1ses!2ses" style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+          </div>
+        </div>
+      </section>
+
+
+     <!-- CONTACTO -->
     <section id="contacto" class="contact-form">
-        <div class="contact-container text-center my-3">
+        <div class="contact-container text-center my-3 row" >
             <h2>Formulario de Contacto</h2>
-             <a href="#how-it-works" class="btn btn-primary btn-lg"
-              >¡Ponte en contacto con nosotros!</a>
-              <button class="btn btn-primary mt-5" >CALL US</button>
             <form id="contactForm">
     
                 <label for="name">Nombre:</label>
@@ -707,6 +820,7 @@
     
                 <button type="submit" id="submitBtn" class="btn-secondary mt-5">Enviar</button> 
             </form>
+              <button class="btn btn-primary mt-5" >CALL US</button>
         </div>
     </section>
 
@@ -714,8 +828,8 @@
     <section id="pricing" class="pricing-content section-padding">
 	<div class="container">					
 		<div class="section-title text-center">
-			<h1>Pricing Plan</h1>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+			<h1>Plan de pago</h1>
+			<p>Aquí podrás encontrar diferentes métodos de pago para obtener nuestros servicios</p>
 		</div>					
 		<div class="row text-center">									
 			<div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
@@ -732,17 +846,17 @@
 					<h1 class="price">$29</h1>
 					<h5>Monthly</h5>
 					<ul>
-						<li>5 website</li>
-						<li>50GB Disk Space</li>
-						<li>50 Email Accounts</li>
+						<li>5 transportes</li>
+						<li>50 minutos máximo</li>
+						<li>Comida incluída</li>
 					</ul>
-					<a href="#">Get start</a>
+					<a href="interactive-demo">Get start</a>
 				</div>
 			</div><!--- END COL -->	
 			<div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
 				<div class="single-pricing">
 					<div class="price-head">								
-						<h2>popular</h2>
+						<h2>Popular</h2>
 						<span></span>
 						<span></span>
 						<span></span>
@@ -753,13 +867,12 @@
 					<h1 class="price">$49</h1>
 					<h5>Monthly</h5>
 					<ul>
-						<li>10 website</li>
-						<li>50GB Disk Space</li>
-						<li>50 Email Accounts</li>
-						<li>50GB Monthly Bandwidth</li>
-						<li>10 Subdomains</li>
+						<li>10 transportes</li>
+						<li>100 minutos máximo</li>
+						<li>Comida incluída</li>
+						<li>Vestuario y limpieza incluída</li>
 					</ul>
-					<a href="#">Get start</a>
+					<a href="#interactive-demo">Get start</a>
 				</div>
 			</div><!--- END COL -->	
 			<div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
@@ -777,21 +890,22 @@
 					<h1 class="price">$69</h1>
 					<h5>Monthly</h5>
 					<ul>
-						<li>15 website</li>
-						<li>50GB Disk Space</li>
-						<li>50 Email Accounts</li>
-						<li>50GB Monthly Bandwidth</li>
-						<li>10 Subdomains</li>
-						<li>15 Domains</li>
-						<li>Unlimited Support</li>
+						<li>15 transportes</li>
+						<li>500 minutos máximo</li>
+						<li>Comida, vestuario y limpieza premium</li>
+						<li>Visitas al veterinario, chequeos médicos</li>
+						<li>Medicamentos incluídos</li>
+						<li>Socialización con otras razas</li>
+						<li>Soporte y atención constante</li>
 					</ul>
-					<a href="#">Get start</a>
+					<a href="#interactive-demo">Get start</a>
 				</div>
 			</div><!--- END COL -->			  
 		</div><!--- END ROW -->
 	</div><!--- END CONTAINER -->
 </section>
         
+
    
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-4">
