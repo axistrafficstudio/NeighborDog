@@ -3,15 +3,16 @@
 }
 
 html, body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevenir scroll horizontal por defecto */
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; 
-    color: #333; 
+    background-color: #ffffff;
+    color: #333;
+    font-size: 16px; /* Tamaño base para desktop, se ajustará en media queries */
 }
 
 section {
@@ -19,23 +20,23 @@ section {
 }
 
 /* NavBar */
-
-#navbar {
+#navbar { /* Este ID no parece estar usándose en el HTML, el nav es un <header> */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; 
+    z-index: 10;
     background-color: #FFC118;
 }
 
 .navbar-brand {
-    color: #ff7f50; 
+    color: #ff7f50;
     font-weight: bold;
 }
 
 .navbar-brand img {
   display: block;
+  /* Ajustar tamaño en media queries si es necesario */
 }
 
 .navbar-nav .nav-link {
@@ -44,12 +45,12 @@ section {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #d2ac5b; 
+    color: #d2ac5b;
 }
 
 /* Hero Section */
 #hero {
-    background-color: #FFC118; 
+    background-color: #FFC118;
     color: rgb(228, 160, 34);
     padding: 5rem 2rem;
     text-align: center;
@@ -64,40 +65,42 @@ section {
     font-size: 1.25rem;
 }
 
-#hero a {
-    background-color: #FFC118; 
+#hero a { /* Este selector puede ser muy general, considera usar una clase más específica si es necesario */
+    background-color: #FFC118;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
     font-size: 1.125rem;
     font-weight: bold;
+    text-decoration: none; /* Añadido para asegurar que no haya subrayado por defecto */
 }
 
 #hero a:hover {
-    background-color: #c77e1f; 
+    background-color: #c77e1f;
 }
 
 /* How it Works */
 #how-it-works {
-    background-color: #c7bdb0;
+    background-color: #c7bdb0; /* Este color puede no contrastar bien con texto claro */
     padding: 3rem 2rem;
     border-radius: 0.5rem;
 }
 
 #how-it-works h2 {
-    color: #dfebdf; 
+    color: #dfebdf; /* Considerar un color más oscuro para el fondo #c7bdb0 */
     font-weight: bold;
 }
 
-#how-it-works .fs-1 {
+#how-it-works .fs-1 { /* Iconos numéricos */
     font-size: 3rem !important;
 }
 
 /* Galerías y clientes */
-#satisfied-clients img {
+#satisfied-clients img,
+#dog-api-gallery img { /* Aplicar a ambas galerías de API */
     width: 100%;
-    height: 250px; 
-    object-fit: cover; 
+    height: 250px;
+    object-fit: cover;
     border-radius: 0.375rem;
 }
 
@@ -107,8 +110,8 @@ section {
 }
 
 #manual-gallery .card-body {
-    background-color: #ffffff; 
-    color: #333; 
+    background-color: #ffffff;
+    color: #333;
     text-align: center;
 }
 
@@ -125,12 +128,13 @@ section {
 }
 
 #interactive-demo form label {
-    color: white;
+    color: white; /* Asegurar que sea legible sobre el fondo #FFC118 */
 }
 
 #interactive-demo .btn {
-    background-color: #FFC118;
+    background-color: #FFC118; /* Esto es redundante si hereda de #hero a, pero puede ser para otros botones */
     color: white;
+    border: 1px solid white; /* Añadir un borde para mejor contraste si es necesario */
 }
 
 #interactive-demo .btn:hover {
@@ -140,7 +144,7 @@ section {
 /* Formulario de Contacto */
 .contact-form {
     background-color:#FFC118;
-    color: #FFC118;
+    /* color: #FFC118;  Esto haría el texto del mismo color que el fondo, lo quito */
     padding: 1rem;
     margin-top: 3rem;
     display: flex;
@@ -155,7 +159,8 @@ section {
     text-align: center;
     font-size: 18px;
     margin-top: 55px;
-    color: #ffffff;
+    color: #333; /* Cambiado de #ffffff para mejor contraste si el fondo general es claro */
+    padding: 0 1rem; /* Añadido para que no toque los bordes en móvil */
 }
 
 .contact-container {
@@ -171,29 +176,35 @@ section {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #333; /* Asegurar color */
 }
 
-label {
+label { /* Estilo general para labels, podría ser más específico */
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
+    color: #333; /* Asegurar color */
 }
 
-input, textarea {
+input, textarea { /* Estilo general, podría ser más específico */
     width: 95%;
     padding: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #444;
     background-color:rgba(228, 185, 43, 0.671);
-    color: white;
+    color: white; /* El texto dentro del input será blanco */
     border-radius: 5px;
     font-size: 1rem;
 }
 
-/* Botones */
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Color de placeholder más claro */
+}
 
-button {
-    width: 100%;
+/* Botones */
+/* Este es un selector muy general. Si es para el botón del formulario de contacto, usa su ID o clase */
+button, .btn { /* Aplicado también a .btn para consistencia con Bootstrap */
+    /* width: 100%; No todos los botones deben ser full-width */
     padding: 1rem;
     background-color: rgb(226, 154, 61);
     color: white;
@@ -202,33 +213,42 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none; /* Para los .btn que son <a> */
 }
 
-button:hover {
+button:hover, .btn:hover {
     background-color: rgb(129, 188, 196);
+    color: white; /* Asegurar que el color del texto se mantenga en hover */
 }
 
-button {
-    border: none;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background-color: #FFC118; 
+.btn-primary { /* Estilos específicos para botones primarios de Bootstrap */
+    background-color: #FFC118;
     color: white;
     border: none;
 }
+.btn-primary:hover {
+    background-color: #e0a800; /* Un tono más oscuro de amarillo para el hover */
+}
+
+.btn-secondary { /* Para el botón de enviar del formulario de contacto */
+     background-color: rgb(226, 154, 61);
+}
+.btn-secondary:hover {
+    background-color: rgb(129, 188, 196);
+}
+
 
 /* Misión Visión Valores */
 #mission-vision-values {
-    background-color: #ffffff; 
-    color: #333333; 
-    height: 30vh; 
+    background-color: #ffffff;
+    color: #333333;
+    /* height: 30vh;  Quitar altura fija para que el contenido la defina */
     width: 100%;
-    display: flex;
+    display: flex; /* Ya usa Bootstrap para layout, esto puede no ser necesario aquí */
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 2rem 0; /* Añadir padding vertical */
 }
 
 #mission-vision-values h2,
@@ -237,7 +257,7 @@ button {
     font-weight: bold;
 }
 
-#mission-vision-values h2 {
+#mission-vision-values h2 { /* El h2 ya tiene data-bs-theme="dark", lo que podría afectar su color */
     font-size: 2.5rem;
 }
 
@@ -258,9 +278,10 @@ button {
     padding: 1.5rem;
     background-color: #f9f9f9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Para que todas las cards tengan la misma altura si están en una fila */
 }
 
-/* Wave Section */
+/* Wave Section (No visible en el HTML proporcionado, pero manteniendo estilos) */
 #wave-section {
     position: relative;
     height: 100vh;
@@ -271,7 +292,7 @@ button {
 .wave-title {
     position: absolute;
     z-index: 2;
-    font-size: 500px;
+    font-size: 500px; /* Esto es extremadamente grande, considerar responsive units */
     color: #fff;
     font-weight: bold;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
@@ -288,10 +309,9 @@ button {
 }
 
 /* Dog API slider */
-
 #dog-api-slider {
     width: 100%;
-    height: 100vh;
+    height: 70vh; /* Reducido de 100vh para que no ocupe toda la pantalla siempre */
     background-color: #333;
     display: flex;
     align-items: center;
@@ -318,25 +338,26 @@ button {
     transition: opacity 1s ease-in-out;
 }
 
-#slider-container img.active {
+#slider-container img.active { /* Esta clase 'active' no se usa en el script.js, el script maneja la opacidad directamente */
     opacity: 1;
 }
 
 /* Flip Cards */
-.main-container {
+.main-container { /* Contenedor de las Flip Cards */
     background-color: rgb(255, 255, 255);
     max-width: 85%;
     margin: 0 auto;
-    border-radius: 50px;
-    margin-top: 100px;
+    border-radius: 50px; /* Este radio es muy grande, puede verse extraño */
+    margin-top: 100px; /* Mucho margen superior */
+    padding: 1rem; /* Añadir padding interno */
 }
 
-.main-title {
+.main-title { /* Título encima de las flip cards */
     text-align: left;
     padding-left: 4%;
     color: #FFC118;
     font-size: 42px;
-    font-family: 'Montserrat', sans-serif, bold;
+    font-family: 'Montserrat', sans-serif, bold; /* "bold" no es un valor válido para font-family aquí */
     font-weight: 800;
     margin: 0.5rem 0;
     letter-spacing: 4px;
@@ -349,33 +370,35 @@ button {
     padding-left: 4%;
     color: #FFC118;
     font-size: 18px;
-    font-family: 'Montserrat', sans-serif, bold;
+    font-family: 'Montserrat', sans-serif; /* Corregido */
     font-weight: 400;
     letter-spacing: 4px;
     margin-bottom: 10px;
 }
 
-.valores-container {
+.valores-container { /* Contenedor directo de las .card-container */
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan */
+    padding: 20px 0; /* Ajustar padding */
     font-family: Arial, sans-serif;
 }
 
 .card-container {
     perspective: 1000px;
-    width: 300px;
-    height: 400px;
-    margin: 10px;
+    width: 300px; /* Ancho fijo para desktop */
+    height: 400px; /* Alto fijo */
+    margin: 15px; /* Añadido margen para separación */
 }
 
-.card {
+.card { /* Este es el elemento que gira */
     position: relative;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.6s;
     cursor: pointer;
+    border: none; /* Quitar el borde por defecto si Bootstrap lo añade a .card */
 }
 
 .card.flipped {
@@ -390,6 +413,7 @@ button {
     border-radius: 15px;
     padding: 20px;
     box-sizing: border-box;
+    color: #333; /* Color de texto por defecto para las cards */
 }
 
 .card-front {
@@ -401,7 +425,7 @@ button {
     justify-content: center;
     font-size: 32px;
     font-weight: bold;
-    font-family: 'Yesteryear', sans-serif;
+    font-family: 'Yesteryear', sans-serif; /* Esta fuente debe estar importada */
 }
 
 .card-back {
@@ -409,13 +433,14 @@ button {
     border: 2px solid #FFC118;
     transform: rotateY(180deg);
     overflow: auto;
+    color: #FFC118; /* Color de texto para el reverso */
 }
 
-.cardtitle {
+.cardtitle { /* Título dentro de .card-back */
     color: #FFC118;
     font-size: 24px;
     margin-bottom: 15px;
-    font-family: "Yesteryear", serif;
+    font-family: "Yesteryear", serif; /* Esta fuente debe estar importada */
     font-weight: 400;
     font-style: normal;
     display: flex;
@@ -425,20 +450,19 @@ button {
 .card-back .content {
     font-size: 16px;
     line-height: 1.5;
-    color: #FFC118;
-    justify-content: center;
-    display: absolute;
+    color: #FFC118; /* Heredado de .card-back, pero se puede especificar */
     text-align: justify;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
 
 /* Footer */
-footer {
-    background-color: #c2c2c2; 
+footer { /* El footer es un <footer class="container ...">, Bootstrap se encarga del container */
+    background-color: #c2c2c2;
     color: white;
     padding: 2rem 0;
     text-align: center;
+    margin-top: 3rem; /* Asegurar margen superior */
 }
 
 footer p {
@@ -447,6 +471,10 @@ footer p {
 }
 
 /* === Pricing Cards === */
+.pricing-content { /* No existe #pricing, es .pricing-content */
+    padding: 40px 0; /* section-padding no es una clase estándar */
+}
+
 .single-pricing {
     background: #fff;
     padding: 40px 20px;
@@ -456,11 +484,12 @@ footer p {
     border: 1px solid #eee;
     box-shadow: 0 10px 40px -10px rgba(0, 64, 128, 0.09);
     transition: 0.3s;
+    margin-bottom: 30px; /* Espacio por defecto entre cards si se apilan */
 }
 
 .single-pricing:hover {
     box-shadow: 0px 60px 60px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    z-index: 100; /* Aumentar z-index en hover puede ser problemático */
     transform: translate(0, -10px);
 }
 
@@ -469,11 +498,11 @@ footer p {
     background: #ffaa17;
     font-size: 16px;
     width: 100px;
-    margin-bottom: 15px;
-    display: block;
+    margin-bottom: 15px; /* Es un span, no un block */
+    display: block; /* Para que width y margin-bottom apliquen */
     -webkit-clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
     clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
-    margin-left: -20px;
+    margin-left: -20px; /* Relativo al padding del padre */
     position: absolute;
 }
 
@@ -482,9 +511,10 @@ footer p {
     margin-bottom: 0px;
     text-transform: capitalize;
     font-size: 26px;
+    color: #333; /* Color por defecto */
 }
 
-.price-head span {
+.price-head span { /* Spans decorativos */
     display: inline-block;
     background: #ffaa17;
     width: 6px;
@@ -494,32 +524,36 @@ footer p {
     margin-bottom: 20px;
 }
 
-.price {
+.price { /* El precio, ej. $29 */
     font-weight: 500;
     font-size: 50px;
     margin-bottom: 0px;
+    color: #333; /* Color por defecto */
 }
 
-.single-pricing h5 {
+.single-pricing h5 { /* "Monthly" */
     font-size: 14px;
     margin-bottom: 0px;
     text-transform: uppercase;
+    color: #666; /* Un color más suave */
 }
 
 .single-pricing ul {
     list-style: none;
+    padding-left: 0; /* Quitar padding por defecto de ul */
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
 .single-pricing ul li {
     line-height: 35px;
+    color: #444; /* Color de los items de la lista */
 }
 
-.single-pricing a {
+.single-pricing a { /* Botón "Get start" */
     background: none;
     border: 2px solid #ffaa17;
-    border-radius: 5000px;
+    border-radius: 5000px; /* Mucho radio, un valor como 25px o 30px es suficiente */
     color: #ffaa17;
     display: inline-block;
     font-size: 16px;
@@ -527,6 +561,7 @@ footer p {
     padding: 10px 45px;
     text-transform: capitalize;
     transition: all 0.3s ease 0s;
+    text-decoration: none;
 }
 
 .single-pricing a:hover,
@@ -536,44 +571,55 @@ footer p {
     border: 2px solid #ffaa17;
 }
 
-.single-pricing-white {
+.single-pricing-white { /* Card de pricing destacada */
     background: #232434;
 }
 
 .single-pricing-white ul li,
-.single-pricing-white h1,
-.single-pricing-white h2,
+.single-pricing-white h1.price, /* Más específico */
+.single-pricing-white .price-head h2, /* Más específico */
 .single-pricing-white h5 {
     color: #fff;
 }
+.single-pricing-white a {
+    border-color: #fff; /* Ajustar el borde del botón en la card oscura */
+    color: #fff;
+}
+.single-pricing-white a:hover {
+    background: #ffaa17;
+    border-color: #ffaa17;
+    color: #fff;
+}
+
 
 /* === Renting Section === */
 .renting {
     background-color: white;
     padding: 40px;
-    min-height: 800px;
-    position: relative;
+    min-height: auto; /* Quitar min-height fijo, dejar que el contenido la defina */
+    /* position: relative; No es necesario si no hay elementos absolutos dentro */
     display: flex;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden; /* Para evitar desbordamiento por el texto grande */
 }
 
 .renting h1 {
     color: #FFC118;
-    font-weight: 1000;
-    font-size: 9rem;
-    text-align: justify;
+    font-weight: 1000; /* 'black' o 900 es el máximo estándar */
+    font-size: 9rem; /* Muy grande, se ajustará en media queries */
+    text-align: justify; /* Puede crear espacios feos, 'left' o 'center' puede ser mejor */
+    line-height: 1; /* Para controlar la altura de línea con fuentes grandes */
 }
 
 /* === Sección Mapa === */
-.section-map {
+.section-map { /* Este selector no está en el HTML, pero los estilos son para la barra de búsqueda */
     background-color: white;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 5%;
+    padding: 1rem; /* Reducido de 5% */
     border-radius: 10px;
 }
 
-.category-item {
+.category-item { /* No presente en el HTML */
     text-align: center;
     width: 100%;
     padding: 10px;
@@ -585,12 +631,12 @@ footer p {
     border-radius: 10px;
 }
 
-.category-icon {
+.category-icon { /* No presente en el HTML */
     font-size: 32px;
     display: block;
 }
 
-.search-bar {
+.search-bar { /* Barra de búsqueda dentro de .icon-bar */
     background: #fff;
     padding: 15px;
     border-radius: 40px;
@@ -601,54 +647,283 @@ footer p {
     border: none;
     outline: none;
     background: transparent;
+    padding: 0.5rem; /* Añadir algo de padding */
 }
 
-.icon-bar {
+.icon-bar { /* Contenedor de la barra de búsqueda */
     background-color: white;
     border-radius: 10px;
     padding: 10px;
 }
 
-/* === Media Queries === */
-
-/* Teléfonos pequeños (<=480px) */
-@media (max-width: 480px) {
-    .single-pricing {
-        margin-bottom: 30px;
-    }
-
-    header h1 {
-        font-size: 1rem;
-    }
-
-    #hero h2 {
-        font-size: 1.25rem;
-    }
-
-    #hero p {
-        font-size: 0.6rem;
-    }
+/* VIDEO RESPONSIVE */
+iframe[src*="youtube.com"], /* Para el video de YouTube */
+iframe[src*="googleusercontent.com"] { /* Para el video de YouTube */
+    width: 100%;
+    max-width: 960px; /* Mantener el ancho máximo del iframe original */
+    height: auto;
+    aspect-ratio: 16 / 9; /* Para mantener la proporción del video */
+    display: block; /* Para centrar con margin auto si es necesario */
+    margin: 1rem auto; /* Espacio y centrado */
 }
 
-/* Tablets y móviles grandes (<=768px) */
-@media (max-width: 768px) {
+/* MODELOS 3D RESPONSIVE */
+model-viewer {
+    width: 100%;
+    max-width: 400px; /* Limitar el tamaño máximo si es necesario */
+    height: 300px; /* Ajustar altura según se necesite */
+    margin: 0 auto; /* Para centrar si el contenedor es más ancho */
+}
+
+
+/* === Media Queries === */
+
+/* Ya tenías estas, las integro y refino */
+
+/* Tabletas (Bootstrap MD breakpoint y similar) */
+@media (max-width: 991.98px) {
     body {
-        font-size: 12px;
+        font-size: 15px;
+    }
+
+    .navbar-brand img {
+        width: 80px;
+        height: auto;
     }
 
     #hero {
-        padding: 2rem 0.5rem;
+        padding: 3rem 1rem;
+    }
+    #hero h2 {
+        font-size: 2rem;
+    }
+    #hero p {
+        font-size: 1.1rem;
     }
 
+    .display-4 { /* Títulos grandes de Bootstrap */
+        font-size: 3rem;
+    }
+
+    .renting h1 {
+        font-size: 5rem; /* Reducir para tabletas */
+    }
+
+    .entradaformulario {
+        font-size: 1rem; /* 16px */
+    }
+    .contact-container h2 {
+        font-size: 2rem;
+    }
+
+    .main-title {
+        font-size: 30px;
+        padding-left: 2%;
+    }
+    .main-title2 {
+        font-size: 16px;
+        padding-left: 2%;
+    }
+
+    .valores-container {
+        justify-content: space-evenly; /* Ajustar espaciado */
+    }
+    .card-container {
+        width: calc(50% - 30px); /* Dos tarjetas por fila con margen */
+        /* width: 280px;  O un ancho fijo si prefieres */
+    }
+
+    .search-bar {
+        flex-wrap: wrap; /* Permitir que los inputs se envuelvan */
+    }
+    .search-input {
+        flex-basis: calc(50% - 10px); /* Dos inputs por línea en tablet */
+        margin-bottom: 10px;
+    }
+    .search-bar button {
+        flex-basis: 100%; /* Botón ocupa toda la línea */
+    }
+
+    #mission-vision-values .col-md-4 {
+        margin-bottom: 1.5rem; /* Asegurar espacio si se apilan antes por flexbox */
+    }
+
+    .pricing-content .row > div[class*="col-lg-4"] {
+        /* Bootstrap se encarga de apilarlos si usas col-md-6 o similar */
+    }
+}
+
+
+/* Móviles (Bootstrap SM y XS breakpoints) */
+@media (max-width: 767.98px) {
+    body {
+        font-size: 14px;
+    }
+
+    #hero {
+        padding: 2rem 1rem;
+    }
     #hero h2 {
-        font-size: 1rem;
+        font-size: 1.6rem; /* Reducido de tu original 1.25rem y 1rem */
+    }
+    #hero p {
+        font-size: 0.9rem; /* Reducido de tu original 0.6rem */
+    }
+    #hero a.btn { /* Ser más específico para el botón del hero */
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 
     #how-it-works {
-        padding: 1rem 0.5rem;
+        padding: 1.5rem 1rem;
     }
+    #how-it-works .text-center .col-md-4 { /* Los pasos de "Cómo funciona" */
+        margin-bottom: 1.5rem;
+    }
+    #how-it-works .fs-1 { /* Iconos numéricos */
+        font-size: 2rem !important;
+    }
+
+
+    .display-4 {
+        font-size: 2.2rem;
+    }
+    .lead { /* Texto introductorio de Bootstrap */
+        font-size: 1rem;
+    }
+
+    .renting h1 {
+        font-size: 2.8rem; /* Bastante más pequeño para móviles */
+        text-align: center; /* Justificado puede ser problemático */
+    }
+
+    .main-container { /* Contenedor de Flip Cards */
+         margin-top: 50px;
+         border-radius: 20px;
+         max-width: 95%;
+    }
+    .main-title {
+        font-size: 24px;
+        text-align: center;
+        padding-left: 0;
+    }
+     .main-title2 {
+        font-size: 14px;
+        text-align: center;
+        padding-left: 0;
+    }
+    .valores-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-container {
+        width: 90%; /* Que ocupen más ancho */
+        max-width: 320px; /* Pero no demasiado */
+        margin: 15px 0; /* Ajustar margen para apilado */
+    }
+
+    .contact-container {
+        padding: 1.5rem;
+        margin: 0 10px; /* Para que no pegue a los bordes en el section.contact-form */
+    }
+    .contact-container h2 {
+        font-size: 1.8rem;
+    }
+    label {
+        font-size: 1rem;
+    }
+    input, textarea {
+        padding: 0.8rem;
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
+    button, .btn { /* Botones generales */
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    #contactForm button[type="submit"] { /* Botón de enviar formulario */
+        width: 100%;
+    }
+
 
     #interactive-demo {
         padding: 2rem 1rem;
+    }
+    #interactive-demo .col-md-6 { /* Columnas de la demo */
+        margin-bottom: 1.5rem;
+    }
+
+    #satisfied-clients img,
+    #dog-api-gallery img {
+        height: 200px; /* Reducir altura de imágenes de galería */
+    }
+
+    #dog-api-slider { /* Slider de imágenes de perros */
+        height: 50vh; /* Menos altura en móviles */
+    }
+
+    /* Barra de búsqueda de mapa */
+    .search-bar {
+        flex-direction: column;
+        border-radius: 20px; /* Menos radio */
+        padding: 10px;
+    }
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+        flex-basis: auto; /* Resetear flex-basis */
+    }
+    .search-input:last-of-type {
+        margin-bottom: 15px; /* Más espacio antes del botón */
+    }
+    .search-bar button {
+        width: 100%;
+        flex-basis: auto; /* Resetear flex-basis */
+    }
+
+    .progressbar .textoprogreso { /* Texto de las barras de progreso */
+        font-size: 0.9rem;
+    }
+
+    /* Pricing cards */
+    .single-pricing {
+        padding: 30px 15px;
+    }
+    .price-head h2 {
+        font-size: 22px;
+    }
+    .price {
+        font-size: 40px;
+    }
+    .single-pricing a {
+        padding: 8px 30px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem 0;
+    }
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    /* Esconder elementos muy grandes si no son cruciales en móvil */
+    .wave-title {
+        display: none; /* Este título es demasiado grande para móviles */
+    }
+}
+
+/* Ajustes muy específicos para teléfonos extra pequeños si es necesario */
+@media (max-width: 480px) {
+    /* Hereda de max-width: 767.98px, pero puedes refinar más */
+    #hero h2 {
+        font-size: 1.4rem;
+    }
+    #hero p {
+        font-size: 0.8rem;
+    }
+
+    .renting h1 {
+        font-size: 2.2rem;
     }
 }
