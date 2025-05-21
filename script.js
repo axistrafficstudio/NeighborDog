@@ -256,6 +256,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
+    // Audios
+    const audioButtonClick = document.getElementById('audioButtonClick');
+    const audioFormSubmit = document.getElementById('audioFormSubmit');
+
+    // --- Función para reproducir sonidos ---
+    function playSound(soundElement) {
+        if (soundElement && soundElement.src) { // Verifica que el elemento exista y tenga un src
+            soundElement.currentTime = 0; // Reinicia el sonido
+            soundElement.play().catch(error => {
+              // No mostrar errores en consola si el usuario no ha interactuado aún (política de autoplay)
+                if (error.name === "NotAllowedError") {
+                    console.warn("La reproducción automática del sonido fue bloqueada por el navegador. Se requiere interacción del usuario.");
+                } else {
+                    console.error("Error al reproducir sonido:", error);
+                }
+            });
+        } else {
+            console.warn("Elemento de audio no encontrado o sin fuente:", soundElement);
+        }
+    }
+
+      // --- Asignar sonido de clic a botones y enlaces ---
+    const clickableElements = document.querySelectorAll(
+    // Botones de Bootstrap
+        '.btn',
+    // Enlaces de la Navbar principal y del dropdown
+        '.navbar-nav .nav-link',
+        '.dropdown-item',
+    // Enlaces dentro de las pricing cards
+        '.single-pricing a',
+    // Botones de los model-viewer (si existen y son clickables directamente)
+        'model-viewer button'
+    // Puedes añadir más selectores aquí si es necesario, separados por coma
+    );
+
+    clickableElements.forEach(element => {
+        element.addEventListener('click', () => {
+            playSound(audioButtonClick);
+        });
+    });
+
+    // Caso especial: Botón de submit del formulario de la demo interactiva
+    const dogFormSubmitButton = document.querySelector('#dog-info-form button[type="submit"]');
+    if (dogFormSubmitButton) {
+        dogFormSubmitButton.addEventListener('click', () => {
+            playSound(audioFormSubmit); // Usamos el sonido de formulario para este
+        });
+    }
     // --- Flip cards ---
     $(document).ready(function () {
       $('.card').click(function () {

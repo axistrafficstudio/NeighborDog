@@ -3,37 +3,44 @@
 }
 
 html, body {
-    overflow-x: hidden; /* Prevenir scroll horizontal por defecto */
+    overflow-x: hidden; 
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif; /* Cambio de Open Sans a Inter */
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     color: #333;
-    font-size: 16px; /* Tamaño base para desktop, se ajustará en media queries */
+    font-size: 16px; 
+    line-height: 1.6; /* Añadido para mejorar legibilidad */
 }
 
 section {
     margin-bottom: 3rem;
 }
 
-
+/* Encabezados con Bodoni Moda */
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 900;
+}
 
 .navbar-brand {
+    font-family: 'Bodoni Moda', serif; 
     color: #ff7f50;
     font-weight: bold;
 }
 
 .navbar-brand img {
   display: block;
-  /* Ajustar tamaño en media queries si es necesario */
 }
 
 .navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
     color: #879f5e;
-    font-weight: 500;
+    font-weight: 500; 
 }
 
 .navbar-nav .nav-link:hover {
@@ -49,22 +56,25 @@ section {
 }
 
 #hero h2 {
+    font-family: 'Bodoni Moda', serif; 
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 900; 
 }
 
 #hero p {
+    font-family: 'Inter', sans-serif;
     font-size: 1.25rem;
 }
 
-#hero a { /* Este selector puede ser muy general, considera usar una clase más específica si es necesario */
+#hero a { 
+    font-family: 'Inter', sans-serif;
     background-color: #FFC118;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
     font-size: 1.125rem;
-    font-weight: bold;
-    text-decoration: none; /* Añadido para asegurar que no haya subrayado por defecto */
+    font-weight: 900; 
+    text-decoration: none;
 }
 
 #hero a:hover {
@@ -73,23 +83,28 @@ section {
 
 /* How it Works */
 #how-it-works {
-    background-color: #c7bdb0; /* Este color puede no contrastar bien con texto claro */
+    background-color: #c7bdb0; 
     padding: 3rem 2rem;
     border-radius: 0.5rem;
 }
 
 #how-it-works h2 {
-    color: #dfebdf; /* Considerar un color más oscuro para el fondo #c7bdb0 */
-    font-weight: bold;
+    color: #dfebdf; 
+    font-weight: bold; /* o 700 */
+}
+#how-it-works p, #how-it-works h3 {
+    font-family: 'Inter', sans-serif;
 }
 
-#how-it-works .fs-1 { /* Iconos numéricos */
+
+#how-it-works .fs-1 { 
+    font-family: 'Inter', sans-serif; 
     font-size: 3rem !important;
 }
 
 /* Galerías y clientes */
 #satisfied-clients img,
-#dog-api-gallery img { /* Aplicar a ambas galerías de API */
+#dog-api-gallery img { 
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -106,6 +121,9 @@ section {
     color: #333;
     text-align: center;
 }
+#manual-gallery .card-text {
+    font-family: 'Inter', sans-serif;
+}
 
 /* Demo Interactiva */
 #interactive-demo {
@@ -115,18 +133,23 @@ section {
     border-radius: 0.5rem;
 }
 
-#interactive-demo h2 {
+#interactive-demo h2, #interactive-demo h4 {
+    font-family: 'Bodoni Moda', serif; 
     font-weight: bold;
+    color: white;
 }
 
+
 #interactive-demo form label {
-    color: white; /* Asegurar que sea legible sobre el fondo #FFC118 */
+    font-family: 'Inter', sans-serif;
+    color: white; 
 }
 
 #interactive-demo .btn {
-    background-color: #FFC118; /* Esto es redundante si hereda de #hero a, pero puede ser para otros botones */
+    font-family: 'Inter', sans-serif; /* Botones de la demo */
+    background-color: #FFC118; 
     color: white;
-    border: 1px solid white; /* Añadir un borde para mejor contraste si es necesario */
+    border: 1px solid white; 
 }
 
 #interactive-demo .btn:hover {
@@ -136,7 +159,6 @@ section {
 /* Formulario de Contacto */
 .contact-form {
     background-color:#FFC118;
-    /* color: #FFC118;  Esto haría el texto del mismo color que el fondo, lo quito */
     padding: 1rem;
     margin-top: 3rem;
     display: flex;
@@ -144,21 +166,15 @@ section {
     align-items: center;
 }
 
-.a.nav-link {
-    color: #FFC118; 
-}
-
-
-
-.entradaformulario {
+.entradaformulario { /* Es un h1 */
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     font-size: 18px;
     margin-top: 55px;
-    color: #333; /* Cambiado de #ffffff para mejor contraste si el fondo general es claro */
-    padding: 0 1rem; /* Añadido para que no toque los bordes en móvil */
+    color: #333; 
+    padding: 0 1rem;
 }
 
 .contact-container {
@@ -178,6 +194,7 @@ section {
 }
 
 label { 
+    font-family: 'Inter', sans-serif;
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
@@ -185,6 +202,7 @@ label {
 }
 
 input, textarea { 
+    font-family: 'Inter', sans-serif; 
     width: 95%;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -196,11 +214,13 @@ input, textarea {
 }
 
 input::placeholder, textarea::placeholder {
+    font-family: 'Inter', sans-serif; /* Para el placeholder */
     color: rgba(255, 255, 255, 0.8); 
 }
 
 
 button, .btn { 
+    font-family: 'Inter', sans-serif; /* Fuente para todos los botones */
     padding: 1rem;
     background-color: rgb(226, 154, 61);
     color: white;
@@ -248,11 +268,12 @@ button:hover, .btn:hover {
 
 #mission-vision-values h2,
 #mission-vision-values h3 {
+    font-family: 'Bodoni Moda', serif;
     color: #FFC118;
-    font-weight: bold;
+    font-weight: bold; /* o 700 */
 }
 
-#mission-vision-values h2 { /* El h2 ya tiene data-bs-theme="dark", lo que podría afectar su color */
+#mission-vision-values h2 { 
     font-size: 2.5rem;
 }
 
@@ -261,6 +282,7 @@ button:hover, .btn:hover {
 }
 
 #mission-vision-values p {
+    font-family: 'Inter', sans-serif;
     color: #333333;
     font-size: 1.125rem;
     margin-top: 1rem;
@@ -273,10 +295,10 @@ button:hover, .btn:hover {
     padding: 1.5rem;
     background-color: #f9f9f9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 100%; /* Para que todas las cards tengan la misma altura si están en una fila */
+    height: 100%; 
 }
 
-/* Wave Section (No visible en el HTML proporcionado, pero manteniendo estilos) */
+/* Wave Section */
 #wave-section {
     position: relative;
     height: 100vh;
@@ -285,9 +307,10 @@ button:hover, .btn:hover {
 }
 
 .wave-title {
+    font-family: 'Montserrat', sans-serif; 
     position: absolute;
     z-index: 2;
-    font-size: 500px; /* Esto es extremadamente grande, considerar responsive units */
+    font-size: 500px; 
     color: #fff;
     font-weight: bold;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
@@ -306,7 +329,7 @@ button:hover, .btn:hover {
 /* Dog API slider */
 #dog-api-slider {
     width: 100%;
-    height: 70vh; /* Reducido de 100vh para que no ocupe toda la pantalla siempre */
+    height: 70vh; 
     background-color: #333;
     display: flex;
     align-items: center;
@@ -333,26 +356,26 @@ button:hover, .btn:hover {
     transition: opacity 1s ease-in-out;
 }
 
-#slider-container img.active { /* Esta clase 'active' no se usa en el script.js, el script maneja la opacidad directamente */
+#slider-container img.active {
     opacity: 1;
 }
 
 /* Flip Cards */
-.main-container { /* Contenedor de las Flip Cards */
+.main-container { 
     background-color: rgb(255, 255, 255);
     max-width: 85%;
     margin: 0 auto;
-    border-radius: 50px; /* Este radio es muy grande, puede verse extraño */
-    margin-top: 100px; /* Mucho margen superior */
-    padding: 1rem; /* Añadir padding interno */
+    border-radius: 50px;
+    margin-top: 100px; 
+    padding: 1rem; 
 }
 
-.main-title { /* Título encima de las flip cards */
+.main-title { 
+    font-family: 'Bodoni Moda', serif; 
     text-align: left;
     padding-left: 4%;
     color: #FFC118;
     font-size: 42px;
-    font-family: 'Montserrat', sans-serif, bold; /* "bold" no es un valor válido para font-family aquí */
     font-weight: 800;
     margin: 0.5rem 0;
     letter-spacing: 4px;
@@ -361,39 +384,38 @@ button:hover, .btn:hover {
 }
 
 .main-title2 {
+    font-family: 'Bodoni Moda', serif; 
     text-align: left;
     padding-left: 4%;
     color: #FFC118;
     font-size: 18px;
-    font-family: 'Montserrat', sans-serif; /* Corregido */
     font-weight: 400;
     letter-spacing: 4px;
     margin-bottom: 10px;
 }
 
-.valores-container { /* Contenedor directo de las .card-container */
+.valores-container { 
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan */
-    padding: 20px 0; /* Ajustar padding */
-    font-family: Arial, sans-serif;
+    flex-wrap: wrap; 
+    padding: 20px 0; 
 }
 
 .card-container {
     perspective: 1000px;
-    width: 300px; /* Ancho fijo para desktop */
-    height: 400px; /* Alto fijo */
-    margin: 15px; /* Añadido margen para separación */
+    width: 300px; 
+    height: 400px; 
+    margin: 15px; 
 }
 
-.card { /* Este es el elemento que gira */
+.card { 
     position: relative;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.6s;
     cursor: pointer;
-    border: none; /* Quitar el borde por defecto si Bootstrap lo añade a .card */
+    border: none;
 }
 
 .card.flipped {
@@ -409,10 +431,11 @@ button:hover, .btn:hover {
     border-radius: 15px;
     padding: 20px;
     box-sizing: border-box;
-    color: #333; /* Color de texto por defecto para las cards */
+    color: #333; 
 }
 
-#botondark {
+#botondark { /* Botón DarkMode */
+    font-family: 'Inter', sans-serif;
     background-color: #FFC118;
     color: white;
     border: none;
@@ -421,7 +444,8 @@ button:hover, .btn:hover {
     font-size: 16px;
 }
 
-.card-front {
+.card-front { /* Texto frontal de la flip card */
+    font-family: 'Bodoni Moda', serif; 
     background-color: rgb(255, 255, 255);
     border: 2px solid #FFC118;
     color: #FFC118;
@@ -429,8 +453,7 @@ button:hover, .btn:hover {
     align-items: center;
     justify-content: center;
     font-size: 32px;
-    font-weight: bold;
-    font-family: 'Yesteryear', sans-serif; /* Esta fuente debe estar importada */
+    font-weight: bold; /* o 700 */
 }
 
 .card-back {
@@ -438,47 +461,53 @@ button:hover, .btn:hover {
     border: 2px solid #FFC118;
     transform: rotateY(180deg);
     overflow: auto;
-    color: #FFC118; /* Color de texto para el reverso */
+    color: #FFC118; 
 }
 
 .cardtitle { /* Título dentro de .card-back */
+    font-family: 'Bodoni Moda', serif; /* Cambio */
     color: #FFC118;
     font-size: 24px;
     margin-bottom: 15px;
-    font-family: "Yesteryear", serif; /* Esta fuente debe estar importada */
-    font-weight: 400;
+    font-weight: 400; 
     font-style: normal;
     display: flex;
     justify-content: center;
 }
 
 .card-back .content {
+    font-family: 'Inter', sans-serif; /* Cambio */
     font-size: 16px;
     line-height: 1.5;
-    color: #FFC118; /* Heredado de .card-back, pero se puede especificar */
+    color: #FFC118;
     text-align: justify;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
 
 /* Footer */
-footer { /* El footer es un <footer class="container ...">, Bootstrap se encarga del container */
+footer { 
     background-color: #c2c2c2;
     color: white;
     padding: 2rem 0;
     text-align: center;
-    margin-top: 3rem; /* Asegurar margen superior */
+    margin-top: 3rem; 
 }
 
 footer p {
+    font-family: 'Inter', sans-serif;
     margin: 0;
     font-size: 0.875rem;
 }
 
 /* === Pricing Cards === */
-.pricing-content { /* No existe #pricing, es .pricing-content */
-    padding: 40px 0; /* section-padding no es una clase estándar */
+.pricing-content {
+    padding: 40px 0; 
 }
+
+.pricing-content .section-title p { /* Párrafo debajo de "Plan de pago" */
+    font-family: 'Inter', sans-serif;
+}
+
 
 .single-pricing {
     background: #fff;
@@ -488,38 +517,38 @@ footer p {
     z-index: 2;
     border: 1px solid #eee;
     box-shadow: 0 10px 40px -10px rgba(0, 64, 128, 0.09);
-    transition: 0.3s;
-    margin-bottom: 30px; /* Espacio por defecto entre cards si se apilan */
+    margin-bottom: 30px; 
 }
 
 .single-pricing:hover {
     box-shadow: 0px 60px 60px rgba(0, 0, 0, 0.1);
-    z-index: 100; /* Aumentar z-index en hover puede ser problemático */
-    transform: translate(0, -10px);
+    z-index: 100;
 }
 
-.price-label {
+.price-label { /* "Best" */
+    font-family: 'Inter', sans-serif; 
     color: #fff;
     background: #ffaa17;
     font-size: 16px;
     width: 100px;
-    margin-bottom: 15px; /* Es un span, no un block */
-    display: block; /* Para que width y margin-bottom apliquen */
+    margin-bottom: 15px; 
+    display: block; 
     -webkit-clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
     clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
-    margin-left: -20px; /* Relativo al padding del padre */
+    margin-left: -20px; 
     position: absolute;
 }
 
-.price-head h2 {
+.price-head h2 { /* "Starter", "Popular", "Advance" */
+    font-family: 'Bodoni Moda', serif;
     font-weight: 600;
     margin-bottom: 0px;
     text-transform: capitalize;
     font-size: 26px;
-    color: #333; /* Color por defecto */
+    color: #333; 
 }
 
-.price-head span { /* Spans decorativos */
+.price-head span { 
     display: inline-block;
     background: #ffaa17;
     width: 6px;
@@ -529,43 +558,46 @@ footer p {
     margin-bottom: 20px;
 }
 
-.price { /* El precio, ej. $29 */
+.price { /* "$29", "$49", "$69" */
+    font-family: 'Inter', sans-serif; 
     font-weight: 500;
     font-size: 50px;
     margin-bottom: 0px;
-    color: #333; /* Color por defecto */
+    color: #333; 
 }
 
 .single-pricing h5 { /* "Monthly" */
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     margin-bottom: 0px;
     text-transform: uppercase;
-    color: #666; /* Un color más suave */
+    color: #666; 
 }
 
 .single-pricing ul {
     list-style: none;
-    padding-left: 0; /* Quitar padding por defecto de ul */
+    padding-left: 0; 
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
 .single-pricing ul li {
+    font-family: 'Inter', sans-serif;
     line-height: 35px;
-    color: #444; /* Color de los items de la lista */
+    color: #444; 
 }
 
 .single-pricing a { /* Botón "Get start" */
+    font-family: 'Inter', sans-serif;
     background: none;
     border: 2px solid #ffaa17;
-    border-radius: 5000px; /* Mucho radio, un valor como 25px o 30px es suficiente */
+    border-radius: 5000px; 
     color: #ffaa17;
     display: inline-block;
     font-size: 16px;
     overflow: hidden;
     padding: 10px 45px;
     text-transform: capitalize;
-    transition: all 0.3s ease 0s;
     text-decoration: none;
 }
 
@@ -576,18 +608,18 @@ footer p {
     border: 2px solid #ffaa17;
 }
 
-.single-pricing-white { /* Card de pricing destacada */
+.single-pricing-white { 
     background: #232434;
 }
 
 .single-pricing-white ul li,
-.single-pricing-white h1.price, /* Más específico */
-.single-pricing-white .price-head h2, /* Más específico */
+.single-pricing-white h1.price, 
+.single-pricing-white .price-head h2,
 .single-pricing-white h5 {
     color: #fff;
 }
 .single-pricing-white a {
-    border-color: #fff; /* Ajustar el borde del botón en la card oscura */
+    border-color: #fff; 
     color: #fff;
 }
 .single-pricing-white a:hover {
@@ -601,30 +633,37 @@ footer p {
 .renting {
     background-color: white;
     padding: 40px;
-    min-height: auto; /* Quitar min-height fijo, dejar que el contenido la defina */
-    /* position: relative; No es necesario si no hay elementos absolutos dentro */
+    min-height: auto;
     display: flex;
     align-items: center;
-    overflow: hidden; /* Para evitar desbordamiento por el texto grande */
+    overflow: hidden; 
 }
 
-.renting h1 {
+.renting h1 { /* Texto gigante */
+    font-family: 'Bodoni Moda', serif;
     color: #FFC118;
-    font-weight: 1000; /* 'black' o 900 es el máximo estándar */
-    font-size: 9rem; /* Muy grande, se ajustará en media queries */
-    text-align: justify; /* Puede crear espacios feos, 'left' o 'center' puede ser mejor */
-    line-height: 1; /* Para controlar la altura de línea con fuentes grandes */
+    font-weight: 900;
+    font-size: 9rem;
+    text-align: justify; 
+    line-height: 1;
 }
 
-/* === Sección Mapa === */
-.section-map { /* Este selector no está en el HTML, pero los estilos son para la barra de búsqueda */
+.section-map small { /* Texto de categorías de mapa */
+    font-family: 'Inter', sans-serif;
+}
+
+.search-input { /* Texto dentro de los inputs de búsqueda */
+    font-family: 'Inter', sans-serif;
+}
+
+.section-map { 
     background-color: white;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem; /* Reducido de 5% */
+    padding: 1rem;
     border-radius: 10px;
 }
 
-.category-item { /* No presente en el HTML */
+.category-item {
     text-align: center;
     width: 100%;
     padding: 10px;
@@ -636,12 +675,12 @@ footer p {
     border-radius: 10px;
 }
 
-.category-icon { /* No presente en el HTML */
+.category-icon { 
     font-size: 32px;
     display: block;
 }
 
-.search-bar { /* Barra de búsqueda dentro de .icon-bar */
+.search-bar { 
     background: #252525;
     padding: 15px;
     border-radius: 40px;
@@ -652,38 +691,53 @@ footer p {
     border: none;
     outline: none;
     background: transparent;
-    padding: 0.5rem; /* Añadir algo de padding */
+    padding: 0.5rem; 
 }
 
-.icon-bar { /* Contenedor de la barra de búsqueda */
+.icon-bar { 
     background-color: white;
     border-radius: 10px;
     padding: 10px;
 }
 
 /* VIDEO RESPONSIVE */
-iframe[src*="youtube.com"], /* Para el video de YouTube */
-iframe[src*="googleusercontent.com"] { /* Para el video de YouTube */
+iframe[src*="youtube.com"], 
+iframe[src*="googleusercontent.com"] { 
     width: 100%;
-    max-width: 960px; /* Mantener el ancho máximo del iframe original */
+    max-width: 960px; 
     height: auto;
-    aspect-ratio: 16 / 9; /* Para mantener la proporción del video */
-    display: block; /* Para centrar con margin auto si es necesario */
-    margin: 1rem auto; /* Espacio y centrado */
+    aspect-ratio: 16 / 9; 
+    display: block; 
+    margin: 1rem auto; 
 }
 
 /* MODELOS 3D RESPONSIVE */
+
+/* Título de cada modelo, ej "Modelo 1: Labrador" */
+#3d-models h5 {
+    font-family: 'Bodoni Moda', serif; 
+}
+
 model-viewer {
     width: 100%;
-    max-width: 400px; /* Limitar el tamaño máximo si es necesario */
-    height: 300px; /* Ajustar altura según se necesite */
-    margin: 0 auto; /* Para centrar si el contenedor es más ancho */
+    max-width: 400px; 
+    height: 300px;
+    margin: 0 auto; 
+}
+
+/* Botón "Ver en tu espacio" dentro de model-viewer */
+model-viewer button {
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* Progress Bar texto */
+.progressbar .textoprogreso {
+    font-family: 'Inter', sans-serif;
 }
 
 
 /* === Media Queries === */
-
-/* Ya tenías estas, las integro y refino */
 
 /* Tabletas (Bootstrap MD breakpoint y similar) */
 @media (max-width: 991.98px) {
@@ -706,16 +760,16 @@ model-viewer {
         font-size: 1.1rem;
     }
 
-    .display-4 { /* Títulos grandes de Bootstrap */
+    .display-4 { 
         font-size: 3rem;
     }
 
     .renting h1 {
-        font-size: 5rem; /* Reducir para tabletas */
+        font-size: 5rem;
     }
 
     .entradaformulario {
-        font-size: 1rem; /* 16px */
+        font-size: 1rem;
     }
     .contact-container h2 {
         font-size: 2rem;
@@ -731,30 +785,25 @@ model-viewer {
     }
 
     .valores-container {
-        justify-content: space-evenly; /* Ajustar espaciado */
+        justify-content: space-evenly; 
     }
     .card-container {
-        width: calc(50% - 30px); /* Dos tarjetas por fila con margen */
-        /* width: 280px;  O un ancho fijo si prefieres */
+        width: calc(50% - 30px); 
     }
 
     .search-bar {
-        flex-wrap: wrap; /* Permitir que los inputs se envuelvan */
+        flex-wrap: wrap;
     }
     .search-input {
-        flex-basis: calc(50% - 10px); /* Dos inputs por línea en tablet */
+        flex-basis: calc(50% - 10px); 
         margin-bottom: 10px;
     }
     .search-bar button {
-        flex-basis: 100%; /* Botón ocupa toda la línea */
+        flex-basis: 100%; 
     }
 
     #mission-vision-values .col-md-4 {
-        margin-bottom: 1.5rem; /* Asegurar espacio si se apilan antes por flexbox */
-    }
-
-    .pricing-content .row > div[class*="col-lg-4"] {
-        /* Bootstrap se encarga de apilarlos si usas col-md-6 o similar */
+        margin-bottom: 1.5rem; 
     }
 }
 
@@ -769,12 +818,12 @@ model-viewer {
         padding: 2rem 1rem;
     }
     #hero h2 {
-        font-size: 1.6rem; /* Reducido de tu original 1.25rem y 1rem */
+        font-size: 1.6rem; 
     }
     #hero p {
-        font-size: 0.9rem; /* Reducido de tu original 0.6rem */
+        font-size: 0.9rem; 
     }
-    #hero a.btn { /* Ser más específico para el botón del hero */
+    #hero a.btn { 
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
     }
@@ -782,10 +831,10 @@ model-viewer {
     #how-it-works {
         padding: 1.5rem 1rem;
     }
-    #how-it-works .text-center .col-md-4 { /* Los pasos de "Cómo funciona" */
+    #how-it-works .text-center .col-md-4 { 
         margin-bottom: 1.5rem;
     }
-    #how-it-works .fs-1 { /* Iconos numéricos */
+    #how-it-works .fs-1 { 
         font-size: 2rem !important;
     }
 
@@ -793,16 +842,16 @@ model-viewer {
     .display-4 {
         font-size: 2.2rem;
     }
-    .lead { /* Texto introductorio de Bootstrap */
+    .lead { 
         font-size: 1rem;
     }
 
     .renting h1 {
-        font-size: 2.8rem; /* Bastante más pequeño para móviles */
-        text-align: center; /* Justificado puede ser problemático */
+        font-size: 2.8rem; 
+        text-align: center; 
     }
 
-    .main-container { /* Contenedor de Flip Cards */
+    .main-container { 
          margin-top: 50px;
          border-radius: 20px;
          max-width: 95%;
@@ -822,14 +871,14 @@ model-viewer {
         align-items: center;
     }
     .card-container {
-        width: 90%; /* Que ocupen más ancho */
-        max-width: 320px; /* Pero no demasiado */
-        margin: 15px 0; /* Ajustar margen para apilado */
+        width: 90%; 
+        max-width: 320px; 
+        margin: 15px 0; 
     }
 
     .contact-container {
         padding: 1.5rem;
-        margin: 0 10px; /* Para que no pegue a los bordes en el section.contact-form */
+        margin: 0 10px; 
     }
     .contact-container h2 {
         font-size: 1.8rem;
@@ -839,13 +888,13 @@ model-viewer {
     }
     input, textarea {
         padding: 0.8rem;
-        width: 100%; /* Ocupar todo el ancho disponible */
+        width: 100%; 
     }
-    button, .btn { /* Botones generales */
+    button, .btn { 
         padding: 0.8rem;
         font-size: 1rem;
     }
-    #contactForm button[type="submit"] { /* Botón de enviar formulario */
+    #contactForm button[type="submit"] { 
         width: 100%;
     }
 
@@ -853,43 +902,41 @@ model-viewer {
     #interactive-demo {
         padding: 2rem 1rem;
     }
-    #interactive-demo .col-md-6 { /* Columnas de la demo */
+    #interactive-demo .col-md-6 { 
         margin-bottom: 1.5rem;
     }
 
     #satisfied-clients img,
     #dog-api-gallery img {
-        height: 200px; /* Reducir altura de imágenes de galería */
+        height: 200px;
     }
 
-    #dog-api-slider { /* Slider de imágenes de perros */
-        height: 50vh; /* Menos altura en móviles */
+    #dog-api-slider { 
+        height: 50vh;
     }
 
-    /* Barra de búsqueda de mapa */
     .search-bar {
         flex-direction: column;
-        border-radius: 20px; /* Menos radio */
+        border-radius: 20px;
         padding: 10px;
     }
     .search-input {
         width: 100%;
         margin-bottom: 10px;
-        flex-basis: auto; /* Resetear flex-basis */
+        flex-basis: auto; 
     }
     .search-input:last-of-type {
-        margin-bottom: 15px; /* Más espacio antes del botón */
+        margin-bottom: 15px;
     }
     .search-bar button {
         width: 100%;
-        flex-basis: auto; /* Resetear flex-basis */
+        flex-basis: auto; 
     }
 
-    .progressbar .textoprogreso { /* Texto de las barras de progreso */
+    .progressbar .textoprogreso {
         font-size: 0.9rem;
     }
 
-    /* Pricing cards */
     .single-pricing {
         padding: 30px 15px;
     }
@@ -904,23 +951,19 @@ model-viewer {
         font-size: 14px;
     }
 
-    /* Footer */
     footer {
         padding: 1.5rem 0;
     }
     footer p {
         font-size: 0.8rem;
     }
-
-    /* Esconder elementos muy grandes si no son cruciales en móvil */
     .wave-title {
-        display: none; /* Este título es demasiado grande para móviles */
+        display: none;
     }
 }
 
-/* Ajustes muy específicos para teléfonos extra pequeños si es necesario */
+/* Ajustes muy específicos para teléfonos extra pequeños*/
 @media (max-width: 480px) {
-    /* Hereda de max-width: 767.98px, pero puedes refinar más */
     #hero h2 {
         font-size: 1.4rem;
     }
@@ -931,4 +974,178 @@ model-viewer {
     .renting h1 {
         font-size: 2.2rem;
     }
+}
+
+/* --- Transiciones y Animaciones Sutiles --- */
+
+.btn,
+.navbar-nav .nav-link,
+.dropdown-item {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.15s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn:hover,
+.navbar-nav .nav-link:hover,
+.dropdown-item:hover {
+    transform: translateY(-1px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.btn:active,
+.navbar-nav .nav-link:active,
+.dropdown-item:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .btn-outline-success:hover {
+    transform: translateY(-1px) scale(1.03); 
+}
+
+#botondark:hover {
+    transform: translateY(-1px) scale(1.05);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #FFC118; 
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 24, 0.3);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    cursor: pointer;
+    border: none;
+}
+
+#manual-gallery .card {
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#manual-gallery .card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+#mission-vision-values .p-4.border {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#mission-vision-values .p-4.border:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.single-pricing {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+body > header, 
+body > main, 
+body > footer, 
+body > section { 
+    animation: fadeInAnimation 0.8s ease-in-out forwards;
+    opacity: 0; 
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Demo Interactiva (Responsive Mejorado) === */
+#interactive-demo {
+    /* background-color: #FFC118; (Ya definido) */
+    /* color: white; (Ya definido) */
+    padding: 2rem 1rem; 
+    /* border-radius: 0.5rem; (Ya definido) */
+}
+
+#interactive-demo h2 { /* Título principal de la sección */
+    /* font-family: 'Bodoni Moda', serif; (Ya definido globalmente para h2) */
+    /* font-weight: bold; (Ya definido) */
+    margin-bottom: 2.5rem !important; 
+}
+
+#interactive-demo h4 { /* "Describe a tu Perro", "Visualización" */
+    /* font-family: 'Bodoni Moda', serif; (Ya definido globalmente para h4) */
+    margin-bottom: 1rem; 
+    color: white; /* Asegurar que el color sea blanco si está sobre fondo amarillo */
+}
+
+#dog-behavior-selector { /* Contenedor de los botones de comportamiento */
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 0.5rem; 
+    margin-bottom: 1rem; 
+}
+
+#dog-behavior-selector .btn { /* Cada botón de comportamiento */
+    font-family: 'Inter', sans-serif; /* Asegurar fuente para estos botones */
+    flex-grow: 1; 
+}
+
+@media (min-width: 768px) { 
+    #interactive-demo .row > div[class*="col-md-"] {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    #dog-info-form { /* El formulario en la columna izquierda */
+        flex-grow: 1; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    #dog-info-form button[type="submit"] { /* Botón "Simular Búsqueda" */
+        margin-top: auto; 
+    }
+}
+
+@media (max-width: 575.98px) { /* Pantallas muy pequeñas para el selector de comportamiento */
+    #dog-behavior-selector {
+        flex-direction: column; 
+        align-items: stretch;   
+    }
+
+    #dog-behavior-selector .btn {
+        width: 100%; 
+        margin-bottom: 0.5rem; 
+    }
+    #dog-behavior-selector .btn:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#dog-visualization { /* Contenedor de la imagen y datos del perro */
+    background-color: #f8f9fa; 
+    color: #333; /* Texto oscuro sobre fondo claro */
+}
+
+#dog-visualization img {
+    max-width: 100%; 
+    height: auto;   
+    max-height: 250px; 
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+#dog-info-display p {
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0.5rem;
+    color: #495057; 
 }

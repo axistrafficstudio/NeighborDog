@@ -23,6 +23,15 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     // Limpiar el texto introducido por el usuario
     document.getElementById("contactForm").reset();
 
+    // === REPRODUCIR SONIDO DE ENVÍO EXITOSO ===
+    if (typeof playSound === "function" && typeof audioFormSubmit !== "undefined") {
+        playSound(audioFormSubmit);
+    } else {
+        // Esto es opcional, pero puede ayudar a depurar si playSound o audioFormSubmit no están disponibles
+        console.warn("playSound o audioFormSubmit no están disponibles globalmente para form.js");
+    }
+    // === FIN DE LA SECCIÓN DE SONIDO ===
+
     // Creamos mensaje con los datos introducidos por el usuario
     let thankYouMessage = "Muchas gracias por rellenar el formulario " + name + ". Nos pondremos en contacto contigo próximamente en: " + email;
 
@@ -61,8 +70,24 @@ updatePlaceholders();
 
 // jQuery Card Flip Nuestros Valores
 
-$(document).ready(function() {
-    $('.card').click(function() {
-        $(this).toggleClass('flipped');
+if (typeof $ !== 'undefined') { // Verificar si jQuery está cargado
+    $(document).ready(function() {
+        $('.card').click(function() { 
+            $(this).toggleClass('flipped');
+            // Si quieres sonido al flipear las cards (opcional):
+            // if (typeof playSound === "function" && typeof audioButtonClick !== "undefined") {
+            //     playSound(audioButtonClick);
+            // }
+        });
     });
-});
+} else {
+    document.querySelectorAll('.valores-container .card').forEach(card => {
+        card.addEventListener('click', function() {
+            this.classList.toggle('flipped');
+            // Si quieres sonido al flipear las cards (opcional):
+            // if (typeof playSound === "function" && typeof audioButtonClick !== "undefined") {
+            //     playSound(audioButtonClick);
+            // }
+        });
+    });
+}
